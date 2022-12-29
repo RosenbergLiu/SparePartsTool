@@ -1,8 +1,17 @@
 ﻿@page "/"
 @using System.ComponentModel.DataAnnotations;
+@using RestSharp;
+@inject NavigationManager _navigationManager
 
-<h1>SAG Login</h1>
-<EditForm id="loginform" class="form-group" Model="@loginModel">
+@if (Preferences.Default.Get("login", false))
+{
+    <h1>Welcome</h1>
+    <button class="btn btn-danger" onclick="@Logout">Logout</button>
+}
+else
+{
+    <h1>SAG Login</h1>
+<EditForm id="loginform" class="form-group" Model="@loginModel" OnValidSubmit="Login">
     <label for="usr">Username</label>
     <InputText id="usr" class="form-control" @bind-Value="loginModel.Username" required/>
 
@@ -13,13 +22,16 @@
     <label class="form-check-label" for="save">Save Login</label>
     <br />
     <br />
-    <button class="btn btn-primary form-control" type="submit" onclick="@Login()">Login</button>
+    <button class="btn btn-primary form-control" type="submit">Login</button>
 </EditForm>
 
-<p>@Result</p>
+<p>@StateMessage</p>
+}
+
+
 
 @code{
-    public string Result { get; set; }
+    public string StateMessage { get; set; }
     public class LoginModel
     {
         [Required]
@@ -49,6 +61,56 @@
             Preferences.Default.Set("username", "");
             Preferences.Default.Set("password", "");
         }
+        var client = new RestClient("https://partners.gorenje.com/sagcc/Login.aspx");
+        var request = new RestRequest("https://partners.gorenje.com/sagcc/Login.aspx",Method.Post);
+        request.AddHeader("sec-ch-ua", "\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Google Chrome\";v=\"108\"");
+        request.AddHeader("sec-ch-ua-mobile", "?0");
+        request.AddHeader("sec-ch-ua-platform", "\"Windows\"");
+        request.AddHeader("Upgrade-Insecure-Requests", "1");
+        request.AddHeader("Content-Type", "application/x-www-form-urlencoded");
+        request.AddHeader("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9");
+        request.AddHeader("host", "partners.gorenje.com");
+        request.AddParameter("__EVENTARGUMENT", "");
+        request.AddParameter("__EVENTTARGET", "");
+        request.AddParameter("__VIEWSTATE", "/wEPDwUKLTg2NDQ0ODA4MA9kFgICAQ9kFggCAQ8PFgIeCEltYWdlVXJsBUd+L0FwcF9UaGVtZXMvVGVtYS9JbWFnZXMvTG9nb19jdXN0b21lcl9jYXJlX21haW5fYnJhbmRzX2NvcnBvX2xldmVsLnBuZ2RkAgkPZBYQAgEPDxYCHgRUZXh0BQVMb2dpbmRkAgMPDxYCHwEFCFVzZXJuYW1lZGQCBQ8PFgIeCU1heExlbmd0aAIgZGQCBw8PFgIfAQUIUGFzc3dvcmRkZAIJDw8WAh8CAiBkZAILDw8WAh8BBQtSZW1lbWJlciBtZWRkAg8PDxYCHwEFCSAgTG9naW4gIGRkAhEPDxYCHwEFFEkgZm9yZ290IG15IHBhc3N3b3JkZGQCCw9kFgoCAQ8PFgIfAQUUSSBmb3Jnb3QgbXkgcGFzc3dvcmRkZAIDDw8WAh8BBQhVc2VybmFtZWRkAgcPDxYCHwEFBUVtYWlsZGQCCw8PFgIfAQUZU2VuZCByZW5ldyBwYXNzd29yZCBlbWFpbGRkAg0PDxYCHwEFBkNhbmNlbGRkAg0PZBYCAgEPZBYEAgEPDxYCHwEFDU5ldyBwYXNzd29yZDpkZAIFDw8WAh8BBRVDb25maXJtIG5ldyBwYXNzd29yZDpkZBgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WAQUMY2JSZW1lbWJlck1ljAACu9/8Za9JlWYtBkROB5bjcQIYi/yxbRPFzd4oTO8=");
+        request.AddParameter("__VIEWSTATEGENERATOR", "24148C73");
+        request.AddParameter("btnPrijava", "  Login  ");
+        request.AddParameter("pwd", loginModel.Password);
+        request.AddParameter("tbxMessages", "");
+        request.AddParameter("usr", loginModel.Username);
+        var response = client.Execute(request);
+        var cookieCollection = client.CookieContainer.GetAllCookies();
+        string cookieString = "";
+        foreach(var cookie in cookieCollection)
+        {
+            cookieString += ("; " + cookie.ToString());
+        }
+        cookieString = cookieString.Substring(2);
+
+        if (cookieString.Length<45)
+        {
+            StateMessage = "Failed";
+            loginModel = new LoginModel();
+        }
+        else
+        {
+            StateMessage = cookieString;
+            Preferences.Default.Set("login", true);
+            _navigationManager.NavigateTo("");
+        }
+
+
+
+
         await Task.CompletedTask;
     }
+
+    private void Logout()
+    {
+        Preferences.Default.Set("login", false);
+        _navigationManager.NavigateTo("");
+    }
+
+
+
 }
