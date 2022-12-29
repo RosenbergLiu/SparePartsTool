@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Runtime;
 
-namespace SparePartsTool;
+namespace SparePartsTools;
 
 [Application]
 public class MainApplication : MauiApplication

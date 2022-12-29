@@ -1,4 +1,4 @@
-namespace SparePartsTool.Data;
+namespace SparePartsTools.Data;
 
 public class WeatherForecast
 {

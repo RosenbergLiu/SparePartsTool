@@ -1,0 +1,54 @@
+﻿@page "/"
+@using System.ComponentModel.DataAnnotations;
+
+<h1>SAG Login</h1>
+<EditForm id="loginform" class="form-group" Model="@loginModel">
+    <label for="usr">Username</label>
+    <InputText id="usr" class="form-control" @bind-Value="loginModel.Username" required/>
+
+    <label for="pwd">Password</label>
+    <InputText type="password" id="pwd" class="form-control" @bind-Value="loginModel.Password" required/>
+
+    <InputCheckbox id="save" class="form-check-input" @bind-Value="loginModel.SaveCred" />
+    <label class="form-check-label" for="save">Save Login</label>
+    <br />
+    <br />
+    <button class="btn btn-primary form-control" type="submit" onclick="@Login()">Login</button>
+</EditForm>
+
+<p>@Result</p>
+
+@code{
+    public string Result { get; set; }
+    public class LoginModel
+    {
+        [Required]
+        public string Username { get; set; }
+        [Required]
+        public string Password { get; set; }
+        public bool SaveCred { get; set; }
+    }
+
+    public LoginModel loginModel = new()
+    {
+        Username=Preferences.Default.Get("username",""),
+        Password=Preferences.Default.Get("password","")
+    };
+
+    private async Task Login()
+    {
+        if (loginModel.SaveCred)
+        {
+            Preferences.Default.Set("save", true);
+            Preferences.Default.Set("username", loginModel.Username);
+            Preferences.Default.Set("password", loginModel.Password);
+        }
+        else
+        {
+            Preferences.Default.Set("save", false);
+            Preferences.Default.Set("username", "");
+            Preferences.Default.Set("password", "");
+        }
+        await Task.CompletedTask;
+    }
+}

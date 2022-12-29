@@ -2,7 +2,7 @@ using System;
 using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
 
-namespace SparePartsTool;
+namespace SparePartsTools;
 
 class Program : MauiApplication
 {

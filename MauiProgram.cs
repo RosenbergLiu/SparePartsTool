@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
-using SparePartsTool.Data;
+using SparePartsTools.Data;
 
-namespace SparePartsTool;
+namespace SparePartsTools;
 
 public static class MauiProgram
 {
