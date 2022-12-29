@@ -97,6 +97,9 @@ else
             StateMessage = cookieString;
             Preferences.Default.Set("login", true);
             _navigationManager.NavigateTo("");
+            string responseString = response.Content;
+            string LoggedName = responseString;
+            Preferences.Default.Set("logged_name", LoggedName);
         }
 
 
