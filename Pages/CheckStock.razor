@@ -1,4 +1,5 @@
 ﻿@page "/checkstock"
+@using RestSharp
 @inject NavigationManager _navigationManager
 
 
@@ -6,7 +7,7 @@
 <h1>Check Part Stock</h1>
 @if (Preferences.Default.Get("login", false) == false)
 {
-    <h3 style="color:red">Please login to SAG first</h3>
+    <h3 style="color:red">Login expired</h3>
     <button class="btn btn-primary" onclick="@GoLogin">Login</button>
 }else{
     <EditForm id="checkstockform" class="form-group" Model="@stockModel" OnValidSubmit="Check">
@@ -14,13 +15,66 @@
         <InputText id="part" class="form-control" @bind-Value="stockModel.PartNumber" required/>
         <br>
         <button class="btn btn-primary form-control" type="submit">Check</button>
+        @if (spin)
+        {
+            <br />
+            <br />
+            <div class="text-center">
+                <div class="spinner-border" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        }
     </EditForm>
+    <br />
+    <br />
+    @if (ResultType == "found")
+    {
+        
+        <div id="result">
+            <h3>@result.number</h3>
+            <h3>@result.name</h3>
+            <br/>
+            <h3>Available stock: @result.stock</h3>
+            @if (result.price == "&nbsp;")
+            {
+                <h3>Part not available</h3>
+            }
+            else
+            {
+                <h3>Price with GST: @result.price AUD</h3>
+            }
+            
+
+        </div>
+    }
+    @if (ResultType == "wrong")
+    {
+        <h3>Part number not exist</h3>
+    }
+    @if (ResultType == "loading")
+    {
+        
+    }
+
 }
 
 
-
-
 @code {
+    public bool spin{ get; set; }
+    public class Result
+    {
+        public string number{ get; set; }
+        public string stock{ get; set; }
+        public string name{ get; set; }
+        public string? alt{ get; set; }
+        public string price{ get; set; }
+
+    }
+    public Result result = new();
+
+    public string Output{ get; set; }
+    public string ResultType { get; set; }
     public class StockModel
     {
         public string PartNumber { get; set; }
@@ -33,8 +87,76 @@
         _navigationManager.NavigateTo("");
     }
 
-    private void Check()
+    public string Cookie = Preferences.Default.Get("cookie", "");
+
+    private async Task Check()
     {
+
+        ResultType = "loading";
+        spin = true;
+        var client = new RestClient("https://partners.gorenje.com/sagcc/se_pregled_alternativ_nov.aspx");
+
+        var request = new RestRequest("https://partners.gorenje.com/sagcc/se_pregled_alternativ_nov.aspx",Method.Post);
+        request.AddHeader("Cookie", Cookie);
+        request.AddHeader("sec-ch-ua", "\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Google Chrome\";v=\"108\"");
+        request.AddHeader("sec-ch-ua-mobile", "?0");
+        request.AddHeader("sec-ch-ua-platform", "\"Windows\"");
+        request.AddHeader("Upgrade-Insecure-Requests", "1");
+        request.AddHeader("Content-Type", "application/x-www-form-urlencoded");
+        request.AddHeader("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9");
+        request.AddHeader("Sec-Fetch-Site", "same-origin");
+        request.AddHeader("Sec-Fetch-Mode", "navigate");
+        request.AddHeader("Sec-Fetch-Dest", "document");
+        request.AddHeader("host", "partners.gorenje.com");
+        request.AddParameter("DXCss", "0_2550,1_68,0_2555,1_210,0_2443,1_209,0_2448,0_2455,0_2459");
+        request.AddParameter("DXScript", "1_11,1_12,1_252,1_23,1_64,1_13,1_14,1_15,1_35,1_183,1_184,1_21,1_22,1_190,1_17,1_186,1_193,1_41,1_19,1_213,1_224,1_225,1_211,1_227,1_236,1_238,1_239,1_230,1_234,1_240,1_39");
+        request.AddParameter("__EVENTARGUMENT", "");
+        request.AddParameter("__EVENTTARGET", "ctl00$ContentPlaceHolder1$tbMat");
+        request.AddParameter("__LASTFOCUS", "");
+        request.AddParameter("__VIEWSTATE", "/wEPDwUJODAyNDE4MzY0D2QWAmYPZBYCAgMPZBYIAgUPPCsACQIADxYCHg5fIVVzZVZpZXdTdGF0ZWdkBg9kEBYSZgIBAgICAwIEAgUCBgIHAggCCQIKAgsCDAINAg4CDwIQAhEWEjwrAAsCABYIHgRUZXh0BQNTQUceBE5hbWUFA1NBRx4IRXhwYW5kZWRnHg5SdW50aW1lQ3JlYXRlZGcBD2QQFgNmAgECAhYDFCsAAhYGHwEFEFVzZXI6IFJvc2hhbiBMaXUeFUNsaWVudEVuYWJsZWRJbnRlcm5hbGgfBGdkFCsAAhYGHgtOYXZpZ2F0ZVVybAUMc3JlZGluYS5hc3B4HwEFBEhvbWUfBGdkFCsAAhYGHwYFC2xvZ291dC5hc3B4HwEFB0xvZyBvZmYfBGdkZDwrAAsCABYIHwEFC0NhbGwgQ2VudGVyHwIFATIfA2cfBGcBD2QQFgNmAgECAhYDFCsAAhYGHwYFFGNhbGxjZW50ZXJfdm5vcy5hc3B4HwEFC0VudGVyIGNsYWltHwRnZBQrAAIWBh8GBRhjYWxsY2VudGVyX3ByZWdsZWQxLmFzcHgfAQUQUmV2aWV3IG9mIGNsYWltcx8EZ2QUKwACFgYfBgUsc2VfcG90cmRpX3Jla2xhbWFjaWplLmFzcHg/ZGVsaXZlcnlpbnN0YWxsPTEfAQUeUmVxdWVzdCBmb3IgZGVsaXZlcnkgLyBpbnN0YWxsHwRnZGQ8KwALAgAWCB8BBQ5TZXJ2aWNlIG9yZGVycx8CBQEzHwNnHwRnAQ9kEBYFZgIBAgICAwIEFgUUKwACFgYfBgUTcG90bmlfcHJlZ2xlZDEuYXNweB8BBRxSZXZpZXcgY2xpZW50cyBpbiB0aGUgYmFza2V0HwRnZBQrAAIWBh8GBRlzZV9wcmdfemFrbGp1Y2V2YW5qZS5hc3B4HwEFIENvbXBsZXRpbmcgb2YgYWdyZWVkIHdvcmsgb3JkZXJzHwRnZBQrAAIWBh8GBSBzZV9kbmV2bm9femFrbGp1Y2VuaV9uYWxvZ2kuYXNweB8BBS1EYWlseSByZXR1cm4gZGVsaXZlcnkgLyBDbG9zZWQgd29ya2luZyBvcmRlcnMfBGdkFCsAAhYGHwYFHHNlX25lcmF6cG9yZWplbmlfbmFsb2dpLmFzcHgfAQUZV29yayBvcmRlcnMgb3V0IG9mIGJhc2tldB8EZ2QUKwACFgYfBgUTcG90bmlfa3JlaXJhajEuYXNweB8BBRtNYW51YWwgYWxsb2NhdGlvbiBvZiBvcmRlcnMfBGdkZDwrAAsCABYIHwEFBVNhbGVzHwIFATkfA2gfBGcBD2QQFgNmAgECAhYDFCsAAhYGHwYFFXNlX3Byb2RhamFfcmRfYXUuYXNweB8BBRBTcGFyZSBwYXJ0cyBzYWxlHwRnZBQrAAIWBh8GBRZzZV9wcm9kYWphX3JkX3ByZy5hc3B4HwEFDVNhbGVzIHByZXZpZXcfBGdkFCsAAhYGHwYFGnNlX2JsYWdham5hX3pha2xqdWNlay5hc3B4HwEFFkNvbXBsZXRpb24gb2YgdGhlIHNhbGUfBGdkZDwrAAsCABYIHwEFCUNhc2ggZGVzax8CBQIxMx8DaB8EZwEPZBAWBmYCAQICAgMCBAIFFgYUKwACFgYfBgUXc2VfYmxhZ2FqbmFfc3RhbmplLmFzcHgfAQUNU3RhdGUgb2YgY2FzaB8EZ2QUKwACFgYfBgUXc2VfYmxhZ2FqbmFfa25qaWdhLmFzcHgfAQUJQ2FzaCBib29rHwRnZBQrAAIWBh8GBRlzZV9ibGFnYWpuYV9wcmVqZW1raS5hc3B4HwEFC0Nhc2ggaW5jb21lHwRnZBQrAAIWBh8GBRhzZV9ibGFnYWpuYV9pemRhdGtpLmFzcHgfAQURQ2FzaCBkaXNidXJzZW1lbnQfBGdkFCsAAhYGHwYFG3NlX2JsYWdham5hX2l6ZHByZV9wcmcuYXNweB8BBRpSZXZpZXcgb2YgRXhwZW5jZXMvSW5jb21lcx8EZ2QUKwACFgYfBgUSc2VfcmVwb3J0X29zcy5hc3B4HwEFEERpc3BsYXkgb2YgT1NTJ3MfBGdkZDwrAAsCABYIHwEFC1N1cGVydmlzaW9uHwIFAjE0HwNoHwRnAQ9kEBYGZgIBAgICAwIEAgUWBhQrAAIWBh8GBRZzZV9uYWR6b3JfcHJvZGFqYS5hc3B4HwEFDVNhbGVzIHByZXZpZXcfBGdkFCsAAhYGHwYFFXNlX25hZHpvcl9pemRwcmUuYXNweB8BBRpSZXZpZXcgb2YgRXhwZW5jZXMvSW5jb21lcx8EZ2QUKwACFgYfBgUVc2VfbmFkem9yX2tuamlnYS5hc3B4HwEFCUNhc2ggYm9vax8EZ2QUKwACFgYfBgUVc2VfbmFkem9yX3N0YW5qZS5hc3B4HwEFDVN0YXRlIG9mIGNhc2gfBGdkFCsAAhYGHwYFF3NlX25hZHpvcl9ibGFnYWpuYS5hc3B4HwEFBlJlcG9ydB8EZ2QUKwACFgYfBgUWc2VfcmVwb3J0X29zcy5hc3B4P249MR8BBRBEaXNwbGF5IG9mIE9TUydzHwRnZGQ8KwALAgAWCB8BBQVTdG9jax8CBQIyMh8DZx8EZwEPZBAWCWYCAQICAgMCBAIFAgYCBwIIFgkUKwACFgYfBgUUemFsb2dhX3NlcnZpc2VyLmFzcHgfAQUSVGVjaG5pY2lhbidzIHN0b2NrHwRnZBQrAAIWBh8GBRdwcmVnbGVkX3phb3N0YW5rb3YuYXNweB8BBRxSZXZpZXcgbWF0ZXJpYWwgcmVzZXJ2YXRpb25zHwRnZBQrAAIWBh8GBRVwcmVnbGVkemFsb2dhbm92LmFzcHgfAQUWUHJldmlldyBvZiBzdG9jayAtIE5FVx8EZ2QUKwACFgYfBgUYc2VfaXpkYWphX21hdGVyaWFsYS5hc3B4HwEFGFJldmlldyBvZiBtYXRlcmlhbCBpc3N1ZR8EZ2QUKwACFgYfBgUZc2VfcHJldnplbV9tYXRlcmlhbGEuYXNweB8BBR5SZXZpZXcgb2YgbWF0ZXJpYWwgdGFraW5nIG92ZXIfBGdkFCsAAhYGHwYFGXNlX2dpYmFuamVfbWF0ZXJpYWxhLmFzcHgfAQUUTWF0ZXJpYWwgZmxvdyByZXZpZXcfBGdkFCsAAhYGHwYFE3BvcHJhdmFfemFsb2dlLmFzcHgfAQUTQ29ycmVjdGlvbiBvZiBTdG9jax8EZ2QUKwACFgYfBgUWc2VfemFsb2dlX3NhZ19zYXAuYXNweB8BBRtTdG9jayBjb21wYXJpc29uICBTQUcgLSBTQVAfBGdkFCsAAhYGHwYFC3phbG9nYS5hc3B4HwEFBVN0b2NrHwRnZGQ8KwALAgAWCB8BBRJSZXR1cm5pbmcgbWF0ZXJpYWwfAgUCMjMfA2gfBGcBD2QQFgJmAgEWAhQrAAIWBh8GBRF2cmFjaWxvX3Zub3MuYXNweB8BBQ9SZXR1cm4gbWF0ZXJpYWwfBGdkFCsAAhYGHwYFHnZyYWNpbG9fcHJlZ2xlZF9wb3RyZGl0ZXYuYXNweB8BBRFSZXR1cm5pbmdzIHJldmlldx8EZ2RkPCsACwIAFggfAQUJSW52ZW50b3J5HwIFAjI0HwNnHwRnAQ9kEBYCZgIBFgIUKwACFgYfBgUTaW52ZW50dXJhX3Zub3MuYXNweB8BBQlJbnZlbnRvcnkfBGdkFCsAAhYGHwYFE3ByaW1lcmphdmFfaW52LmFzcHgfAQUYSW52ZW50b3J5IFJldmlldy9Db21wYXJlHwRnZGQ8KwALAgAWCB8BBQZPcmRlcnMfAgUCMjUfA2cfBGcBD2QQFgJmAgEWAhQrAAIWBh8GBRRwcmVnbGVkX25hcm9jaWwuYXNweB8BBR5SZXZpZXcgb3JkZXJzLCBtYW51YWwgb3JkZXJpbmcfBGdkFCsAAhYGHwYFD3NlX3ByZXZ6ZW0uYXNweB8BBSFDb25maXJtYXRpb24gb2YgcmVjaWV2ZWQgbWF0ZXJpYWwfBGdkZDwrAAsCABYIHwEFBFNldHMfAgUCMjYfA2cfBGcBD2QQFgZmAgECAgIDAgQCBRYGFCsAAhYGHwYFG3ByZWdsZWRfc2V0X3BsYW5pcmFuamUuYXNweB8BBRpSZXZpZXcgb2Ygc3BhcmUgcGFydHMgc2V0cx8EZ2QUKwACFgYfBgUXc2Vfc2V0aV9zZXJ2aXNlcmppLmFzcHgfAQUcVHJpZ2dlciBwb2ludHMgLSBUZWNobmljaWFucx8EZ2QUKwACFgYfBgUUc2Vfc2V0aV90ZWhuaWthLmFzcHgfAQUiVHJpZ2dlciBwb2ludHMgLSBTZXJ2aWNlIHRlY2huaXF1ZR8EZ2QUKwACFgYfBgUVc2Vfc2V0aV9zZXR0aW5ncy5hc3B4HwEFIVVwZGF0aW5nIG9yZGVycyBzY2hlZHVsZSBzZXR0aW5ncx8EZ2QUKwACFgYfBgUbc2Vfc2V0aV9vYnZlc2NhbmplX21uZy5hc3B4HwEFIkpvYiBvcmRlciBpbXBsZW1lbnRhdGlvbiBpbmZvcm1pbmcfBGdkFCsAAhYGHwYFGHNlX3NlcnZpc2VyX2Nhcl9iaW4uYXNweB8BBRpWZWhpY2xlcyBzdG9yYWdlIGxvY2F0aW9ucx8EZ2RkPCsACwIAFggfAQUXU3RvY2sgVHJhbnNmZXIgUmVjZWlwdHMfAgUCMjcfA2cfBGcBD2QQFgJmAgEWAhQrAAIWBh8GBRFtZWRfc2tsX3Zub3MuYXNweB8BBR1DcmVhdGUgU3RvY2sgVHJhbnNmZXIgUmVjZWlwdB8EZ2QUKwACFgYfBgUUbWVkX3NrbF9wcmVnbGVkLmFzcHgfAQUeU3RvY2sgVHJhbnNmZXIgcmVjZWlwdHMgcmV2aWV3HwRnZGQ8KwALAgAWCB8BBRZTcGFyZSBwYXJ0cyBwcmljZSBsaXN0HwIFAjI4HwNnHwRnAQ9kEBYDZgIBAgIWAxQrAAIWBh8GBQ1zZV9jZW5pay5hc3B4HwEFFlNwYXJlIHBhcnRzIHByaWNlIGxpc3QfBGdkFCsAAhYGHwYFGnNlX3ByZWdsZWRfYWx0ZXJuYXRpdi5hc3B4HwEFGE92ZXJ2aWV3IG9mIGFsdGVybmF0aXZlcx8EZ2QUKwACFggfBgUec2VfcHJlZ2xlZF9hbHRlcm5hdGl2X25vdi5hc3B4HwEFIE92ZXJ2aWV3IG9mIGFsdGVybmF0aXZlcyAtIFN0b2NrHwRnHghTZWxlY3RlZGdkZDwrAAsCABYIHwEFDkFkbWluaXN0cmF0aW9uHwIFAjMyHwNoHwRnAQ9kEBYBZhYBFCsAAhYGHwYFFGNoYW5nZV9wYXNzd29yZC5hc3B4HwEFD0NoYW5nZSBwYXNzd29yZB8EZ2RkPCsACwIAFggfAQUHUmVwb3J0cx8CBQIzMx8DaB8EZwEPZBAWA2YCAQICFgMUKwACFgYfBgUhc2VfcmVwb3J0X3pha2xqdWNlbmlfbmFsb2dpMS5hc3B4HwEFF1JldmlldyBvZiBjbG9zZWQgb3JkZXJzHwRnZBQrAAIWBh8GBRRzZV9vc3NfbmFyb2NpbGEuYXNweB8BBSNSZXZpZXcgc3RvY2tzIG9mIG1hdGVyaWFscyBmcm9tIE9TUx8EZ2QUKwACFgYfBgUgc2VfcmVwb3J0X2NsYWltc19mb3JfZGVhbGVyLmFzcHgfAQUYQ2xhaW1zIGV4cG9ydCBmb3IgZGVhbGVyHwRnZGQ8KwALAgAWCB8BBQRIZWxwHwIFAjM1HwNoHwRnAQ9kEBYBZhYBFCsAAhYGHwYFCnBvbW9jLmFzcHgfAQUESGVscB8EZ2RkPCsACwIAFggfAQUDR0FTHwIFAjM4HwNnHwRnAQ9kEBYBZhYBFCsAAhYGHwYFD2dhc19yZXBvcnQu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ayBpbiBDLlcuIChTTE8pHw4CCgs8KwAFAQAWBh8PAv////8PHxAC/////w8fEQsrBAA8KwAMAgAWBB4KQ29sVmlzaWJsZWgfDgILCzwrAAUBABYGHw8C/////w8fEAL/////Dx8RCysEAA8WDAIBAgECAQIBAgECAQIBAgECAQIBAgECARYBBX9EZXZFeHByZXNzLldlYi5HcmlkVmlld0RhdGFUZXh0Q29sdW1uLCBEZXZFeHByZXNzLldlYi52MjEuMiwgVmVyc2lvbj0yMS4yLjMuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iODhkMTc1NGQ3MDBlNDlhCTwrAAgBBxQrAAIWAh8BBR9QYWdlIHswfSBmcm9tIHsxfSAoezJ9IHJlc3VsdHMpZA0UKwABFgQeCkdyb3VwUGFuZWwFMURyYWcgYSBjb2x1bW4gaGVhZGVyIGhlcmUgdG8gZ3JvdXAgYnkgdGhhdCBjb2x1bW4eDERhdGFFbXB0eVJvdwUSTm8gZGF0YSB0byBkaXNwbGF5GDwrAAcBBRQrAAJkZGQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgQFDWN0bDAwJHNhZ01lbnUFFGN0bDAwJGNiSmV6aWtBcGwkREREBSJjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJGltZ0V4Y2VsBSdjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJEFTUHhHcmlkVmlldzGtQUjHnOt0UJdPifc5dQJqX/WDEtk7Lc+a/fNvckV/wg==");
+        request.AddParameter("__VIEWSTATEGENERATOR", "597CC0DF");
+        request.AddParameter("ctl00$ContentPlaceHolder1$ASPxGridView1", "{&quot;keys&quot;:[],&quot;callbackState&quot;:&quot;BwUHAwIERGF0YQcnAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwAHAAcAAgtGb3JtYXRTdGF0ZQcAAgVTdGF0ZQYsAQcMBwACAQcBAgEHAgIBBwMCAQcEAgEHBQIBBwYCAQcHAgEHCAIBBwkCAQcKAgEHCwIABwEHAgcBBwAHAAcABwAHDAcABv//BwEG//8HAgb//wcDBv//BwQG//8HBQb//wcGBv//BwcG//8HCAb//wcJBv//BwoG//8HCwb//wIABQAAAIAJAghtYXRlcmlhbAcACQIAAgADB34AXFN5c3RlbS5TdHJpbmdbXSwgbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5AgABAAAA/////wEAAAAAAAAAEQEAAAAAAAAACwIABwACAQcABwACAAIBBwAHAAcABwAHAAIIUGFnZVNpemUDBzICGlByZXZSZXF1ZXN0VmlzaWJsZVJvd0NvdW50AwcA&quot;,&quot;groupLevelState&quot;:{},&quot;selection&quot;:&quot;&quot;,&quot;toolbar&quot;:null}");
+        request.AddParameter("ctl00$ContentPlaceHolder1$btnPrikazi", "Show");
+        request.AddParameter("ctl00$ContentPlaceHolder1$tbMat", stockModel.PartNumber);
+        request.AddParameter("ctl00$cbJezikApl", "English");
+        request.AddParameter("ctl00$cbJezikApl$DDD$L", "EN");
+        request.AddParameter("ctl00$cbJezikApl$DDD$L$State", "{&quot;CustomCallback&quot;:&quot;&quot;}");
+        request.AddParameter("ctl00$cbJezikApl$DDDState", "{&quot;windowsState&quot;:&quot;0:0:-1:0:0:0:-10000:-10000:1:0:0:0&quot;}");
+        request.AddParameter("ctl00$sagMenu", "{&quot;selectedItemIndexPath&quot;:&quot;12i2&quot;,&quot;groupsExpanding&quot;:&quot;1;1;1;0;0;0;1;0;1;1;1;1;1;0;0;0;1;1&quot;}");
+        request.AddParameter("ctl00$tbOss", "");
+        request.AddParameter("ctl00_cbJezikApl_VI", "EN");
+        var response = await client.ExecuteAsync(request);
+        string html = response.Content;
+        var dataResult = html.Split("</td><td class=\"dxgv\">");
+        if (dataResult.Length > 1)
+        {
+            ResultType = "found";
+            var dataSet = dataResult[3].Split("</td><td class=\"dxgv\" align=\"right\">");
+
+            result.number = dataResult[1];
+            result.stock = dataSet[0];
+            result.price = dataSet[2];
+            result.name = dataResult[2];
+            Result reuslt = new();
+        }
+        if (dataResult.Length == 1)
+        {
+            ResultType = "wrong";
+        }
         
+        if(html.Split("Overview of alternatives").Length == 1)
+        {
+            Preferences.Default.Set("login", false);
+            Preferences.Default.Set("user", "");
+        }
+        Output = dataResult.Length.ToString();
+        await Task.CompletedTask;
+        spin = false;
     }
+
+
+
+
+
+
 }

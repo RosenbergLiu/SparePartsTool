@@ -5,8 +5,10 @@
 
 @if (Preferences.Default.Get("login", false))
 {
-    <h1>Welcome</h1>
+    <h1>Welcome! @User</h1>
+    <br />
     <button class="btn btn-danger" onclick="@Logout">Logout</button>
+    
 }
 else
 {
@@ -23,15 +25,32 @@ else
     <br />
     <br />
     <button class="btn btn-primary form-control" type="submit">Login</button>
+        @if (spin)
+        {
+            <br />
+            <br />
+            <div class="text-center">
+                <div class="spinner-border" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        }
 </EditForm>
 
-<p>@StateMessage</p>
+<br />
+<p style="color:red">@StateMessage</p>
 }
 
 
 
 @code{
+
+
+
+
+    public bool spin{ get; set; }
     public string StateMessage { get; set; }
+    public string User { get; set; }
     public class LoginModel
     {
         [Required]
@@ -49,6 +68,7 @@ else
 
     private async Task Login()
     {
+        spin = true;
         if (loginModel.SaveCred)
         {
             Preferences.Default.Set("save", true);
@@ -78,7 +98,7 @@ else
         request.AddParameter("pwd", loginModel.Password);
         request.AddParameter("tbxMessages", "");
         request.AddParameter("usr", loginModel.Username);
-        var response = client.Execute(request);
+        var response = await client.ExecuteAsync(request);
         var cookieCollection = client.CookieContainer.GetAllCookies();
         string cookieString = "";
         foreach(var cookie in cookieCollection)
@@ -89,31 +109,35 @@ else
 
         if (cookieString.Length<45)
         {
-            StateMessage = "Failed";
+            StateMessage = " Login Failed";
             loginModel = new LoginModel();
         }
         else
         {
-            StateMessage = cookieString;
             Preferences.Default.Set("login", true);
-            _navigationManager.NavigateTo("");
-            string responseString = response.Content;
-            string LoggedName = responseString;
-            Preferences.Default.Set("logged_name", LoggedName);
+            string html = response.Content;
+            User = html.Split("User: ")[1].Split("</span>")[0];
+            Preferences.Default.Set("user", User);
+            Preferences.Default.Set("cookie", cookieString);
         }
 
 
 
 
         await Task.CompletedTask;
+        spin = false;
     }
 
     private void Logout()
     {
+        Preferences.Default.Set("user", "");
         Preferences.Default.Set("login", false);
         _navigationManager.NavigateTo("");
     }
 
-
+    protected override void OnInitialized()
+    {
+        User = Preferences.Default.Get("user", "");
+    }
 
 }
