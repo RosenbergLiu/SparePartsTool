@@ -133,7 +133,7 @@
             ResultType = "found";
             var dataSet = dataResult[3].Split("</td><td class=\"dxgv\" align=\"right\">");
 
-            result.number = dataResult[1];
+            result.number = dataResult[1].Substring(12);
             result.stock = dataSet[0];
             result.price = dataSet[2];
             result.name = dataResult[2];
@@ -143,7 +143,7 @@
         {
             ResultType = "wrong";
         }
-        
+
         if(html.Split("Overview of alternatives").Length == 1)
         {
             Preferences.Default.Set("login", false);
@@ -152,6 +152,7 @@
         Output = dataResult.Length.ToString();
         await Task.CompletedTask;
         spin = false;
+        stockModel = new();
     }
 
 
