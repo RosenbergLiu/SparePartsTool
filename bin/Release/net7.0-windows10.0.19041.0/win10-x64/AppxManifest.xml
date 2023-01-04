@@ -7,10 +7,10 @@
 
     For more information on package manifest files, see http://go.microsoft.com/fwlink/?LinkID=241727
   -->
-  <Identity Name="21956XiangyuRoshanLiu.53694DD8BA380" Publisher="CN=Roshan X. Liu" Version="1.1.4.0" ProcessorArchitecture="x64" />
-  <mp:PhoneIdentity PhoneProductId="1a447767-f60c-4f3a-b3a7-65e3072e6b96" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Identity Name="21956XiangyuRoshanLiu.50264AF497CCC" Publisher="CN=Roshan Xiangyu Liu" Version="1.3.4.0" ProcessorArchitecture="x64" />
+  <mp:PhoneIdentity PhoneProductId="e215d173-c6f6-47f4-b8cb-2261fd3e7218" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
-    <DisplayName>SparePartsTools</DisplayName>
+    <DisplayName>SpareParts Tools</DisplayName>
     <PublisherDisplayName>Xiangyu Roshan Liu</PublisherDisplayName>
     <Logo>appiconStoreLogo.png</Logo>
   </Properties>
@@ -24,7 +24,7 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="SparePartsTools.exe" EntryPoint="Windows.FullTrustApplication">
-      <uap:VisualElements DisplayName="SparePartsTools" Description="SparePartsTools" Square150x150Logo="appiconMediumTile.png" Square44x44Logo="appiconLogo.png" BackgroundColor="transparent">
+      <uap:VisualElements DisplayName="SpareParts Tools" Description="SparePartsTools" Square150x150Logo="appiconMediumTile.png" Square44x44Logo="appiconLogo.png" BackgroundColor="transparent">
         <uap:DefaultTile Square71x71Logo="appiconSmallTile.png" Wide310x150Logo="appiconWideTile.png" Square310x310Logo="appiconLargeTile.png" ShortName="SparePartsTools">
           <uap:ShowNameOnTiles>
             <uap:ShowOn Tile="square150x150Logo" />

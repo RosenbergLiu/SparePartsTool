@@ -8,8 +8,8 @@
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
     <SolutionConfiguration>Release|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>x64</PackageArchitecture>
-    <PackageIdentityName>21956XiangyuRoshanLiu.53694DD8BA380</PackageIdentityName>
-    <PackageIdentityPublisher>CN=Roshan X. Liu</PackageIdentityPublisher>
+    <PackageIdentityName>21956XiangyuRoshanLiu.50264AF497CCC</PackageIdentityName>
+    <PackageIdentityPublisher>CN=Roshan Xiangyu Liu</PackageIdentityPublisher>
     <IntermediateOutputPath>C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Release\net7.0-windows10.0.19041.0\win10-x64\</IntermediateOutputPath>
     <RemoteDeploymentType>CopyToDevice</RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>

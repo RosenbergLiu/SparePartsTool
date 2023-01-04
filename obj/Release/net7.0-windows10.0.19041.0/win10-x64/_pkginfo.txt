@@ -1,1 +1,1 @@
-\\aufs1.ad.gorenje.si\shared\SpareParts\General\Release\SparePartsTools_1.1.4.0_Test\SparePartsTools_1.1.4.0_x64.msix
+\\aufs1.ad.gorenje.si\shared\SpareParts\General\Release\SparePartsTools_1.3.4.0_Test\SparePartsTools_1.3.4.0_x64.msix

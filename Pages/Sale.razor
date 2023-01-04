@@ -1,5 +1,18 @@
 ﻿@page "/sale"
-<h3>Sale</h3>
+@using RestSharp
+@inject NavigationManager _navigationManager
+<h1>Sale</h1>
+
+@if(Preferences.Default.Get("user"," ")!="Roshan Liu")
+{
+    <h3>You are not authorized to use this function</h3>
+}
+
+
+
+
+
+
 
 @code {
 

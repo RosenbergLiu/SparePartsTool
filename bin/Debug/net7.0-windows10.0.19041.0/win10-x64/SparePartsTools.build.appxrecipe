@@ -8,8 +8,8 @@
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>x64</PackageArchitecture>
-    <PackageIdentityName>0E673D7F-0765-49EF-BADF-AEB19943B056</PackageIdentityName>
-    <PackageIdentityPublisher>CN=User Name</PackageIdentityPublisher>
+    <PackageIdentityName>21956XiangyuRoshanLiu.50264AF497CCC</PackageIdentityName>
+    <PackageIdentityPublisher>CN=B2622251-BD87-41D0-B49B-014D549301D6</PackageIdentityPublisher>
     <IntermediateOutputPath>C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\</IntermediateOutputPath>
     <RemoteDeploymentType>CopyToDevice</RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>

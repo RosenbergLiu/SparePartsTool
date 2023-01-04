@@ -50,7 +50,7 @@
     }
     @if (ResultType == "wrong")
     {
-        <h3>Part number not exist</h3>
+        <h3 style="color:red">* Part number not exist</h3>
     }
     @if (ResultType == "loading")
     {
@@ -67,7 +67,6 @@
         public string number{ get; set; }
         public string stock{ get; set; }
         public string name{ get; set; }
-        public string? alt{ get; set; }
         public string price{ get; set; }
 
     }
@@ -137,7 +136,7 @@
             result.stock = dataSet[0];
             result.price = dataSet[2];
             result.name = dataResult[2];
-            Result reuslt = new();
+            
         }
         if (dataResult.Length == 1)
         {
