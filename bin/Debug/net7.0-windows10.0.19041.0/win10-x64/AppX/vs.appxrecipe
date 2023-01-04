@@ -18,36 +18,36 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppX</LayoutDir>
-    <RegisteredManifestChecksum>D9F84714ED1F029CE63796B46324B6CF47E7712BDB9067875409C857E019E43C</RegisteredManifestChecksum>
-    <RegisteredPackageMoniker>21956XiangyuRoshanLiu.50264AF497CCC_1.3.6.0_x64__vp1hbg00a83r2</RegisteredPackageMoniker>
+    <RegisteredManifestChecksum>687AA60132B373F0EB02BCEBA3D40EDE86CBC35404995BA7D5252316341E3859</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>21956XiangyuRoshanLiu.50264AF497CCC_2.2.10.0_x64__vp1hbg00a83r2</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>21956XiangyuRoshanLiu.50264AF497CCC_vp1hbg00a83r2!App</RegisteredUserModeAppID>
     <RegisteredPackageID>21956XiangyuRoshanLiu.50264AF497CCC</RegisteredPackageID>
     <RegisteredPackagePublisher>CN=B2622251-BD87-41D0-B49B-014D549301D6</RegisteredPackagePublisher>
-    <RegisteredVersion>1.3.6.0</RegisteredVersion>
+    <RegisteredVersion>2.2.10.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
     <AppXManifest Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-01-04T00:09:51.849</Modified>
+      <Modified>2023-01-04T23:06:38.724</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-01-04T00:09:51.190</Modified>
+      <Modified>2023-01-04T23:06:38.013</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\SparePartsTools.runtimeconfig.json">
       <PackagePath>SparePartsTools.runtimeconfig.json</PackagePath>
-      <Modified>2023-01-03T21:57:43.558</Modified>
+      <Modified>2023-01-04T23:04:41.349</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\SparePartsTools.dll">
       <PackagePath>SparePartsTools.dll</PackagePath>
-      <Modified>2023-01-04T00:09:50.324</Modified>
+      <Modified>2023-01-04T23:06:37.150</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>SparePartsTools.exe</PackagePath>
-      <Modified>2023-01-04T00:09:50.346</Modified>
+      <Modified>2023-01-04T23:06:37.172</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\.nuget\packages\microsoft.netcore.app.runtime.win-x64\7.0.0\runtimes\win-x64\lib\net7.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -833,6 +833,10 @@
       <PackagePath>Microsoft.AspNetCore.Metadata.dll</PackagePath>
       <Modified>2022-10-19T06:09:02.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\xygen\.nuget\packages\microsoft.data.sqlite.core\7.0.1\lib\net6.0\Microsoft.Data.Sqlite.dll">
+      <PackagePath>Microsoft.Data.Sqlite.dll</PackagePath>
+      <Modified>2022-11-09T07:12:22.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\.nuget\packages\microsoft.extensions.configuration\7.0.0\lib\net7.0\Microsoft.Extensions.Configuration.dll">
       <PackagePath>Microsoft.Extensions.Configuration.dll</PackagePath>
       <Modified>2022-10-18T16:15:22.000</Modified>
@@ -965,6 +969,10 @@
       <PackagePath>RestSharp.dll</PackagePath>
       <Modified>2022-11-19T16:12:36.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\xygen\.nuget\packages\sqlitepclraw.core\2.1.2\lib\netstandard2.0\SQLitePCLRaw.core.dll">
+      <PackagePath>SQLitePCLRaw.core.dll</PackagePath>
+      <Modified>2022-09-18T19:26:48.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\.nuget\packages\system.io.pipelines\7.0.0\lib\net7.0\System.IO.Pipelines.dll">
       <PackagePath>System.IO.Pipelines.dll</PackagePath>
       <Modified>2022-10-18T16:15:28.000</Modified>
@@ -979,7 +987,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\SparePartsTools.deps.json">
       <PackagePath>SparePartsTools.deps.json</PackagePath>
-      <Modified>2023-01-04T00:09:51.683</Modified>
+      <Modified>2023-01-04T23:06:38.551</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files\dotnet\packs\Microsoft.Maui.Controls.Ref.win\7.0.49\ref\net7.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
       <PackagePath>Microsoft.Maui.Controls.Compatibility.pri</PackagePath>
@@ -999,11 +1007,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\scopedcss\bundle\SparePartsTools.styles.css">
       <PackagePath>wwwroot\SparePartsTools.styles.css</PackagePath>
-      <Modified>2022-12-28T23:26:29.307</Modified>
+      <Modified>2023-01-04T23:02:18.217</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\scopedcss\projectbundle\SparePartsTools.bundle.scp.css">
       <PackagePath>wwwroot\SparePartsTools.bundle.scp.css</PackagePath>
-      <Modified>2022-12-28T23:26:29.309</Modified>
+      <Modified>2023-01-04T23:02:18.218</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\wwwroot\css\app.css">
       <PackagePath>wwwroot\css\app.css</PackagePath>
@@ -1063,23 +1071,23 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
       <PackagePath>splashSplashScreen.scale-100.png</PackagePath>
-      <Modified>2022-12-28T23:27:30.814</Modified>
+      <Modified>2023-01-04T23:02:23.813</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png">
       <PackagePath>splashSplashScreen.scale-125.png</PackagePath>
-      <Modified>2022-12-28T23:27:30.829</Modified>
+      <Modified>2023-01-04T23:02:23.829</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png">
       <PackagePath>splashSplashScreen.scale-150.png</PackagePath>
-      <Modified>2022-12-28T23:27:30.853</Modified>
+      <Modified>2023-01-04T23:02:23.849</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png">
       <PackagePath>splashSplashScreen.scale-200.png</PackagePath>
-      <Modified>2022-12-28T23:27:30.883</Modified>
+      <Modified>2023-01-04T23:02:23.878</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
       <PackagePath>splashSplashScreen.scale-400.png</PackagePath>
-      <Modified>2022-12-28T23:27:30.982</Modified>
+      <Modified>2023-01-04T23:02:23.996</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf">
       <PackagePath>OpenSans-Regular.ttf</PackagePath>
@@ -1087,207 +1095,207 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
-      <Modified>2022-12-28T23:27:31.038</Modified>
+      <Modified>2023-01-04T23:02:24.039</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
       <PackagePath>appiconLargeTile.scale-100.png</PackagePath>
-      <Modified>2022-12-28T23:27:31.294</Modified>
+      <Modified>2023-01-04T23:02:24.288</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
       <PackagePath>appiconLargeTile.scale-125.png</PackagePath>
-      <Modified>2022-12-28T23:27:31.306</Modified>
+      <Modified>2023-01-04T23:02:24.300</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
       <PackagePath>appiconLargeTile.scale-150.png</PackagePath>
-      <Modified>2022-12-28T23:27:31.315</Modified>
+      <Modified>2023-01-04T23:02:24.310</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
       <PackagePath>appiconLargeTile.scale-200.png</PackagePath>
-      <Modified>2022-12-28T23:27:31.330</Modified>
+      <Modified>2023-01-04T23:02:24.325</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
       <PackagePath>appiconLargeTile.scale-400.png</PackagePath>
-      <Modified>2022-12-28T23:27:31.383</Modified>
+      <Modified>2023-01-04T23:02:24.381</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-16.png</PackagePath>
-      <Modified>2022-12-28T23:27:31.122</Modified>
+      <Modified>2023-01-04T23:02:24.115</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-24.png</PackagePath>
-      <Modified>2022-12-28T23:27:31.125</Modified>
+      <Modified>2023-01-04T23:02:24.119</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-256.png</PackagePath>
-      <Modified>2022-12-28T23:27:31.141</Modified>
+      <Modified>2023-01-04T23:02:24.135</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-32.png</PackagePath>
-      <Modified>2022-12-28T23:27:31.129</Modified>
+      <Modified>2023-01-04T23:02:24.122</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-48.png</PackagePath>
-      <Modified>2022-12-28T23:27:31.133</Modified>
+      <Modified>2023-01-04T23:02:24.127</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-16.png</PackagePath>
-      <Modified>2022-12-28T23:27:31.100</Modified>
+      <Modified>2023-01-04T23:02:24.094</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-24.png</PackagePath>
-      <Modified>2022-12-28T23:27:31.103</Modified>
+      <Modified>2023-01-04T23:02:24.097</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-256.png</PackagePath>
-      <Modified>2022-12-28T23:27:31.118</Modified>
+      <Modified>2023-01-04T23:02:24.112</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-32.png</PackagePath>
-      <Modified>2022-12-28T23:27:31.107</Modified>
+      <Modified>2023-01-04T23:02:24.101</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-48.png</PackagePath>
-      <Modified>2022-12-28T23:27:31.110</Modified>
+      <Modified>2023-01-04T23:02:24.104</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
       <PackagePath>appiconLogo.scale-100.png</PackagePath>
-      <Modified>2022-12-28T23:27:31.048</Modified>
+      <Modified>2023-01-04T23:02:24.049</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
       <PackagePath>appiconLogo.scale-125.png</PackagePath>
-      <Modified>2022-12-28T23:27:31.052</Modified>
+      <Modified>2023-01-04T23:02:24.053</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
       <PackagePath>appiconLogo.scale-150.png</PackagePath>
-      <Modified>2022-12-28T23:27:31.057</Modified>
+      <Modified>2023-01-04T23:02:24.057</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
       <PackagePath>appiconLogo.scale-200.png</PackagePath>
-      <Modified>2022-12-28T23:27:31.065</Modified>
+      <Modified>2023-01-04T23:02:24.062</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
       <PackagePath>appiconLogo.scale-400.png</PackagePath>
-      <Modified>2022-12-28T23:27:31.071</Modified>
+      <Modified>2023-01-04T23:02:24.067</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png">
       <PackagePath>appiconLogo.targetsize-16.png</PackagePath>
-      <Modified>2022-12-28T23:27:31.075</Modified>
+      <Modified>2023-01-04T23:02:24.070</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png">
       <PackagePath>appiconLogo.targetsize-24.png</PackagePath>
-      <Modified>2022-12-28T23:27:31.079</Modified>
+      <Modified>2023-01-04T23:02:24.075</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png">
       <PackagePath>appiconLogo.targetsize-256.png</PackagePath>
-      <Modified>2022-12-28T23:27:31.094</Modified>
+      <Modified>2023-01-04T23:02:24.090</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png">
       <PackagePath>appiconLogo.targetsize-32.png</PackagePath>
-      <Modified>2022-12-28T23:27:31.083</Modified>
+      <Modified>2023-01-04T23:02:24.079</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png">
       <PackagePath>appiconLogo.targetsize-48.png</PackagePath>
-      <Modified>2022-12-28T23:27:31.086</Modified>
+      <Modified>2023-01-04T23:02:24.082</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
       <PackagePath>appiconMediumTile.scale-100.png</PackagePath>
-      <Modified>2022-12-28T23:27:31.193</Modified>
+      <Modified>2023-01-04T23:02:24.184</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
       <PackagePath>appiconMediumTile.scale-125.png</PackagePath>
-      <Modified>2022-12-28T23:27:31.199</Modified>
+      <Modified>2023-01-04T23:02:24.189</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
       <PackagePath>appiconMediumTile.scale-150.png</PackagePath>
-      <Modified>2022-12-28T23:27:31.205</Modified>
+      <Modified>2023-01-04T23:02:24.197</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
       <PackagePath>appiconMediumTile.scale-200.png</PackagePath>
-      <Modified>2022-12-28T23:27:31.214</Modified>
+      <Modified>2023-01-04T23:02:24.205</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
       <PackagePath>appiconMediumTile.scale-400.png</PackagePath>
-      <Modified>2022-12-28T23:27:31.228</Modified>
+      <Modified>2023-01-04T23:02:24.219</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
       <PackagePath>appiconSmallTile.scale-100.png</PackagePath>
-      <Modified>2022-12-28T23:27:31.168</Modified>
+      <Modified>2023-01-04T23:02:24.160</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
       <PackagePath>appiconSmallTile.scale-125.png</PackagePath>
-      <Modified>2022-12-28T23:27:31.172</Modified>
+      <Modified>2023-01-04T23:02:24.163</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
       <PackagePath>appiconSmallTile.scale-150.png</PackagePath>
-      <Modified>2022-12-28T23:27:31.176</Modified>
+      <Modified>2023-01-04T23:02:24.168</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
       <PackagePath>appiconSmallTile.scale-200.png</PackagePath>
-      <Modified>2022-12-28T23:27:31.181</Modified>
+      <Modified>2023-01-04T23:02:24.172</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
       <PackagePath>appiconSmallTile.scale-400.png</PackagePath>
-      <Modified>2022-12-28T23:27:31.188</Modified>
+      <Modified>2023-01-04T23:02:24.180</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
       <PackagePath>appiconStoreLogo.scale-100.png</PackagePath>
-      <Modified>2022-12-28T23:27:31.145</Modified>
+      <Modified>2023-01-04T23:02:24.139</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
       <PackagePath>appiconStoreLogo.scale-125.png</PackagePath>
-      <Modified>2022-12-28T23:27:31.150</Modified>
+      <Modified>2023-01-04T23:02:24.144</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
       <PackagePath>appiconStoreLogo.scale-150.png</PackagePath>
-      <Modified>2022-12-28T23:27:31.154</Modified>
+      <Modified>2023-01-04T23:02:24.147</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
       <PackagePath>appiconStoreLogo.scale-200.png</PackagePath>
-      <Modified>2022-12-28T23:27:31.157</Modified>
+      <Modified>2023-01-04T23:02:24.151</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
       <PackagePath>appiconStoreLogo.scale-400.png</PackagePath>
-      <Modified>2022-12-28T23:27:31.164</Modified>
+      <Modified>2023-01-04T23:02:24.156</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
       <PackagePath>appiconWideTile.scale-100.png</PackagePath>
-      <Modified>2022-12-28T23:27:31.233</Modified>
+      <Modified>2023-01-04T23:02:24.224</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
       <PackagePath>appiconWideTile.scale-125.png</PackagePath>
-      <Modified>2022-12-28T23:27:31.240</Modified>
+      <Modified>2023-01-04T23:02:24.231</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
       <PackagePath>appiconWideTile.scale-150.png</PackagePath>
-      <Modified>2022-12-28T23:27:31.248</Modified>
+      <Modified>2023-01-04T23:02:24.239</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
       <PackagePath>appiconWideTile.scale-200.png</PackagePath>
-      <Modified>2022-12-28T23:27:31.260</Modified>
+      <Modified>2023-01-04T23:02:24.251</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
-      <Modified>2022-12-28T23:27:31.285</Modified>
+      <Modified>2023-01-04T23:02:24.278</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
-      <Modified>2022-12-28T23:27:31.082</Modified>
+      <Modified>2023-01-04T23:02:24.086</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
       <PackagePath>dotnet_bot.scale-125.png</PackagePath>
-      <Modified>2022-12-28T23:27:31.093</Modified>
+      <Modified>2023-01-04T23:02:24.097</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
       <PackagePath>dotnet_bot.scale-150.png</PackagePath>
-      <Modified>2022-12-28T23:27:31.109</Modified>
+      <Modified>2023-01-04T23:02:24.112</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
       <PackagePath>dotnet_bot.scale-200.png</PackagePath>
-      <Modified>2022-12-28T23:27:31.130</Modified>
+      <Modified>2023-01-04T23:02:24.134</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
-      <Modified>2022-12-28T23:27:31.180</Modified>
+      <Modified>2023-01-04T23:02:24.176</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\Shared\MainLayout.razor.css">
       <PackagePath>Shared\MainLayout.razor.css</PackagePath>

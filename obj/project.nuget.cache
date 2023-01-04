@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "9s3C9Cc7R5s8zPqpWqykHAm3JvM3uZCV5Uk+1F+festrNmM6b7fLBje8qEEMUMK7Bk+kJfXEuBXyAx/TjMZBLw==",
+  "dgSpecHash": "GK35lbpA4eTLIzpVcnSQo3cEuijksKMxMYBsbFGZ/XNxR2l3E1h2bS88FtYyX40X1/KOchLBqqXb4+C/b8dmAw==",
   "success": true,
   "projectFilePath": "C:\\Users\\xygen\\Documents\\GitHub\\SparePartsTool\\SparePartsTools.csproj",
   "expectedPackageFiles": [
@@ -13,6 +13,7 @@
     "C:\\Users\\xygen\\.nuget\\packages\\microsoft.aspnetcore.components.webview\\7.0.0\\microsoft.aspnetcore.components.webview.7.0.0.nupkg.sha512",
     "C:\\Users\\xygen\\.nuget\\packages\\microsoft.aspnetcore.components.webview.maui\\7.0.49\\microsoft.aspnetcore.components.webview.maui.7.0.49.nupkg.sha512",
     "C:\\Users\\xygen\\.nuget\\packages\\microsoft.aspnetcore.metadata\\7.0.0\\microsoft.aspnetcore.metadata.7.0.0.nupkg.sha512",
+    "C:\\Users\\xygen\\.nuget\\packages\\microsoft.data.sqlite.core\\7.0.1\\microsoft.data.sqlite.core.7.0.1.nupkg.sha512",
     "C:\\Users\\xygen\\.nuget\\packages\\microsoft.extensions.configuration\\7.0.0\\microsoft.extensions.configuration.7.0.0.nupkg.sha512",
     "C:\\Users\\xygen\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\xygen\\.nuget\\packages\\microsoft.extensions.configuration.binder\\7.0.0\\microsoft.extensions.configuration.binder.7.0.0.nupkg.sha512",
@@ -37,7 +38,11 @@
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages\\microsoft.windows.sdk.buildtools\\10.0.22621.1\\microsoft.windows.sdk.buildtools.10.0.22621.1.nupkg.sha512",
     "C:\\Users\\xygen\\.nuget\\packages\\microsoft.windowsappsdk\\1.1.5\\microsoft.windowsappsdk.1.1.5.nupkg.sha512",
     "C:\\Users\\xygen\\.nuget\\packages\\restsharp\\108.0.3\\restsharp.108.0.3.nupkg.sha512",
+    "C:\\Users\\xygen\\.nuget\\packages\\sqlitepclraw.core\\2.1.2\\sqlitepclraw.core.2.1.2.nupkg.sha512",
+    "C:\\Users\\xygen\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
     "C:\\Users\\xygen\\.nuget\\packages\\system.io.pipelines\\7.0.0\\system.io.pipelines.7.0.0.nupkg.sha512",
+    "C:\\Users\\xygen\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\xygen\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
     "C:\\Users\\xygen\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
     "C:\\Users\\xygen\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512",
     "C:\\Users\\xygen\\.nuget\\packages\\xamarin.android.glide\\4.13.2.2\\xamarin.android.glide.4.13.2.2.nupkg.sha512",

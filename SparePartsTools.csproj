@@ -39,6 +39,7 @@
         <PackageCertificateThumbprint>EF19B58544A68D20B49F950120645D069C80F80C</PackageCertificateThumbprint>
         <AppxPackageSigningTimestampDigestAlgorithm>SHA256</AppxPackageSigningTimestampDigestAlgorithm>
         <GenerateTemporaryStoreCertificate>True</GenerateTemporaryStoreCertificate>
+        <DefaultLanguage>EN-US</DefaultLanguage>
     </PropertyGroup>
 
     <ItemGroup>
@@ -60,6 +61,7 @@
     </ItemGroup>
 
     <ItemGroup>
+        <PackageReference Include="Microsoft.Data.Sqlite.Core" Version="7.0.1" />
         <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
         <PackageReference Include="RestSharp" Version="108.0.3" />
     </ItemGroup>
@@ -67,6 +69,10 @@
     <ItemGroup>
       <Folder Include="Data\" />
       <Folder Include="Properties\PublishProfiles\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
     </ItemGroup>
 
 </Project>

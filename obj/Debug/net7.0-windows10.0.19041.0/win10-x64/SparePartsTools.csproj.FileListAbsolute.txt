@@ -5,7 +5,6 @@ C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.1904
 C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\SparePartsTools.dll
 C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\SparePartsTools.pdb
 C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\resources.pri
-C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml
 C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Microsoft.AspNetCore.Authorization.dll
 C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Microsoft.AspNetCore.Components.dll
 C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Microsoft.AspNetCore.Components.Forms.dll
@@ -13,6 +12,7 @@ C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.1904
 C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Microsoft.AspNetCore.Components.WebView.dll
 C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Microsoft.AspNetCore.Components.WebView.Maui.dll
 C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Microsoft.AspNetCore.Metadata.dll
+C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Microsoft.Data.Sqlite.dll
 C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Configuration.dll
 C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Configuration.Abstractions.dll
 C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Configuration.Binder.dll
@@ -45,6 +45,8 @@ C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.1904
 C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.System.Power.Projection.dll
 C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.System.Projection.dll
 C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Microsoft.WindowsAppRuntime.Bootstrap.Net.dll
+C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\RestSharp.dll
+C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\SQLitePCLRaw.core.dll
 C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\System.IO.Pipelines.dll
 C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Microsoft.Graphics.Canvas.dll
 C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Microsoft.WindowsAppRuntime.Bootstrap.dll
@@ -346,5 +348,5 @@ C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.1904
 C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\qualifiers.txt
 C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
+C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml
 C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\ProjectArchitectures.txt
-C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\RestSharp.dll

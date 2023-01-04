@@ -8,6 +8,14 @@
     <AppxShowAllApps>True</AppxShowAllApps>
     <_LastSelectedProfileId>MSIX-win10-x641.pubxml</_LastSelectedProfileId>
     <PackageOptionalProjectsInIdeBuilds>False</PackageOptionalProjectsInIdeBuilds>
+    <Source>C:\Users\xygen\Pictures\icon.png</Source>
+    <SmallTileSource>C:\Users\xygen\Pictures\icon.png</SmallTileSource>
+    <MediumTileSource>C:\Users\xygen\Pictures\icon.png</MediumTileSource>
+    <WideTileSource>C:\Users\xygen\Pictures\icon.png</WideTileSource>
+    <LargeTileSource>C:\Users\xygen\Pictures\icon.png</LargeTileSource>
+    <AppIconSource>C:\Users\xygen\Pictures\icon.png</AppIconSource>
+    <SplashScreenSource>C:\Users\xygen\Pictures\icon.png</SplashScreenSource>
+    <PackageLogoSource>C:\Users\xygen\Pictures\icon.png</PackageLogoSource>
   </PropertyGroup>
   <ItemGroup>
     <None Update="Platforms\Windows\Package.appxmanifest">

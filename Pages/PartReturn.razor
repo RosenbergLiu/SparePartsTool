@@ -1,0 +1,23 @@
+﻿@page "/partreturn"
+@using RestSharp
+@inject NavigationManager _navigationManager
+
+<h1>PartReturn</h1>
+@if (Preferences.Default.Get("login", false) == false)
+{
+    <h3 style="color:red">Login expired</h3>
+    <button class="btn btn-primary" onclick="@GoLogin">Login</button>
+}
+else
+{
+
+
+}
+
+@code {
+        private void GoLogin()
+        {
+            _navigationManager.NavigateTo("");
+        }
+
+}

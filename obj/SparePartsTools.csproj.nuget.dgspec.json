@@ -66,6 +66,10 @@
               "version": "[7.0.49, )",
               "autoReferenced": true
             },
+            "Microsoft.Data.Sqlite.Core": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
               "version": "[7.0.0, )",
@@ -193,6 +197,10 @@
               "version": "[7.0.49, )",
               "autoReferenced": true
             },
+            "Microsoft.Data.Sqlite.Core": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
               "version": "[7.0.0, )",
@@ -264,6 +272,10 @@
               "target": "Package",
               "version": "[7.0.49, )",
               "autoReferenced": true
+            },
+            "Microsoft.Data.Sqlite.Core": {
+              "target": "Package",
+              "version": "[7.0.1, )"
             },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
@@ -337,6 +349,10 @@
               "target": "Package",
               "version": "[7.0.49, )",
               "autoReferenced": true
+            },
+            "Microsoft.Data.Sqlite.Core": {
+              "target": "Package",
+              "version": "[7.0.1, )"
             },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
