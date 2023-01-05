@@ -28,15 +28,11 @@ else
         @if (spin)
         {
             <br />
-            <br />
-            <div class="text-center">
-                <div class="spinner-border" role="status">
-                    <span class="visually-hidden">Loading...</span>
-                </div>
-            </div>
+            <Progress Class="mb-3">
+                <ProgressBar Type="ProgressType.StripedAndAnimated" Color="ProgressColor.Primary" Width="100" />
+            </Progress>
         }
 </EditForm>
-
 <br />
 <p style="color:red">@StateMessage</p>
 }

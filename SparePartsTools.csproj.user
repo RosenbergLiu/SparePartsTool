@@ -16,6 +16,10 @@
     <AppIconSource>C:\Users\xygen\Pictures\icon.png</AppIconSource>
     <SplashScreenSource>C:\Users\xygen\Pictures\icon.png</SplashScreenSource>
     <PackageLogoSource>C:\Users\xygen\Pictures\icon.png</PackageLogoSource>
+    <SelectedPlatformGroup>Emulator</SelectedPlatformGroup>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-android|x64'">
+    <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
   </PropertyGroup>
   <ItemGroup>
     <None Update="Platforms\Windows\Package.appxmanifest">

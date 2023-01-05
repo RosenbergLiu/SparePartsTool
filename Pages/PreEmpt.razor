@@ -78,10 +78,12 @@
     </EditForm>
     @if (bar)
     {
-        <div class="progress">
-            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 100%"></div>
-        </div>
+        <br />
+        <Progress Class="mb-3">
+            <ProgressBar Type="ProgressType.StripedAndAnimated" Color="ProgressColor.Primary" Width="100" />
+        </Progress>
     }
+    <br />
     <p class="text-center" style="color:red">@submitMessage</p>
     
     

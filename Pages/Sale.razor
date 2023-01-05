@@ -1,11 +1,27 @@
 ﻿@page "/sale"
 @using RestSharp
 @inject NavigationManager _navigationManager
-<h1>Sale</h1>
+@using BlazorBootstrap;
 
-@if(Preferences.Default.Get("user"," ")!="Roshan Liu")
+<h1>Sale</h1>
+@if (Preferences.Default.Get("login", false) == false)
+{
+    <h3 style="color:red">Login expired</h3>
+    <button class="btn btn-primary" onclick="@GoLogin">Login</button>
+}
+else if (Preferences.Default.Get("user", " ") != "Roshan Liu")
 {
     <h3>You are not authorized to use this function</h3>
+}
+else
+{
+
+    <Progress Class="mb-3">
+        <ProgressBar Type="ProgressType.StripedAndAnimated" Color="ProgressColor.Warning" Width="30" />
+    </Progress>
+
+
+
 }
 
 
@@ -15,5 +31,11 @@
 
 
 @code {
+    private void GoLogin()
+    {
+        _navigationManager.NavigateTo("");
+    }
+
+
 
 }

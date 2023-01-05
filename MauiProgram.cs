@@ -1,4 +1,9 @@
-﻿using Microsoft.Extensions.Logging;
+﻿
+using BlazorBootstrap;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
+
+
 namespace SparePartsTools;
 
 public static class MauiProgram
@@ -15,8 +20,10 @@ public static class MauiProgram
 
 		builder.Services.AddMauiBlazorWebView();
 
+        builder.Services.AddBlazorBootstrap();
+
 #if DEBUG
-		builder.Services.AddBlazorWebViewDeveloperTools();
+        builder.Services.AddBlazorWebViewDeveloperTools();
 		builder.Logging.AddDebug();
 #endif
 

@@ -1,6 +1,7 @@
 ﻿@page "/partreturn"
 @using RestSharp
 @inject NavigationManager _navigationManager
+@using SQLite;
 
 <h1>PartReturn</h1>
 @if (Preferences.Default.Get("login", false) == false)
@@ -10,14 +11,46 @@
 }
 else
 {
+    <EditForm class="form-group container" Model="@record" OnValidSubmit="Add">
+        <label for="barcode">Barcode</label>
+        <InputText id="barcode" class="form-control" @bind-Value="record.Barcode" />
+        <label for="partnumber">Part Number</label>
+        <InputText id="partnumber" class="form-control" @bind-Value="record.PartNumber" />
+    </EditForm>
 
+
+    @StateMessage
 
 }
 
 @code {
-        private void GoLogin()
-        {
-            _navigationManager.NavigateTo("");
-        }
+    public string StateMessage{ get; set; }
+
+    private void GoLogin()
+    {
+        _navigationManager.NavigateTo("");
+    }
+    [Table("parts")]
+    public class PartRecord
+    {
+        [PrimaryKey]public string Barcode { get; set; }
+        public string PartNumber { get; set; }
+        public string Quantity{ get; set; }
+        public string PartName { get; set; }
+    }
+    public PartRecord record = new();
+
+    public SQLiteConnection conn = new SQLiteConnection(Path.Combine(FileSystem.AppDataDirectory.ToString(), "Parts"));
+
+
+    protected override void OnInitialized()
+    {
+        conn.CreateTable<PartRecord>();
+    }
+
+    public async Task Add()
+    {
+        
+    }
 
 }
