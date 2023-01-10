@@ -49,12 +49,9 @@ C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.1904
 C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.Widgets.Projection.dll
 C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Microsoft.WindowsAppRuntime.Bootstrap.Net.dll
 C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\RestSharp.dll
-C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\SQLitePCLRaw.batteries_v2.dll
-C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\SQLitePCLRaw.core.dll
 C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\System.IO.Pipelines.dll
 C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Microsoft.Graphics.Canvas.dll
 C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Microsoft.WindowsAppRuntime.Bootstrap.dll
-C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\e_sqlite3.dll
 C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Microsoft.CSharp.dll
 C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Microsoft.VisualBasic.Core.dll
 C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Microsoft.VisualBasic.dll
@@ -355,6 +352,3 @@ C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.1904
 C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
 C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\ProjectArchitectures.txt
 C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\BlazorBootstrap.dll
-C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\SQLite-net.dll
-C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\SQLitePCLRaw.nativelibrary.dll
-C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\SQLitePCLRaw.provider.dynamic_cdecl.dll

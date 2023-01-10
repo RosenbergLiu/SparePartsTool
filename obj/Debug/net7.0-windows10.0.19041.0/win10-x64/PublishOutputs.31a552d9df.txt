@@ -235,14 +235,8 @@ C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-android\publish\
 C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-android\publish\Microsoft.Windows.Widgets.Projection.dll
 C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-android\publish\Microsoft.WindowsAppRuntime.Bootstrap.Net.dll
 C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-android\publish\RestSharp.dll
-C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-android\publish\SQLite-net.dll
-C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-android\publish\SQLitePCLRaw.batteries_v2.dll
-C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-android\publish\SQLitePCLRaw.nativelibrary.dll
-C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-android\publish\SQLitePCLRaw.core.dll
-C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-android\publish\SQLitePCLRaw.provider.dynamic_cdecl.dll
 C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-android\publish\System.IO.Pipelines.dll
 C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-android\publish\Microsoft.Graphics.Canvas.dll
 C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-android\publish\Microsoft.WindowsAppRuntime.Bootstrap.dll
-C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-android\publish\e_sqlite3.dll
 C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-android\publish\resources.pri
 C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-android\publish\SparePartsTools.deps.json

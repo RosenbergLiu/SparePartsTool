@@ -7,7 +7,7 @@
 
     For more information on package manifest files, see http://go.microsoft.com/fwlink/?LinkID=241727
   -->
-  <Identity Name="21956XiangyuRoshanLiu.50264AF497CCC" Publisher="CN=B2622251-BD87-41D0-B49B-014D549301D6" Version="2.2.11.0" ProcessorArchitecture="x64" />
+  <Identity Name="21956XiangyuRoshanLiu.50264AF497CCC" Publisher="CN=B2622251-BD87-41D0-B49B-014D549301D6" Version="2.3.12.0" ProcessorArchitecture="x64" />
   <mp:PhoneIdentity PhoneProductId="e215d173-c6f6-47f4-b8cb-2261fd3e7218" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>SpareParts Tools</DisplayName>
