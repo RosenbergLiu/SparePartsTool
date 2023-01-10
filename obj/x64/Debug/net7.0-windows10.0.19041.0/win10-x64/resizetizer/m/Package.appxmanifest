@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities" IgnorableNamespaces="uap rescap">
-  <Identity Name="21956XiangyuRoshanLiu.50264AF497CCC" Publisher="CN=B2622251-BD87-41D0-B49B-014D549301D6" Version="2.2.10.0" />
+  <Identity Name="21956XiangyuRoshanLiu.50264AF497CCC" Publisher="CN=B2622251-BD87-41D0-B49B-014D549301D6" Version="2.2.11.0" />
   <mp:PhoneIdentity PhoneProductId="e215d173-c6f6-47f4-b8cb-2261fd3e7218" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>SpareParts Tools</DisplayName>

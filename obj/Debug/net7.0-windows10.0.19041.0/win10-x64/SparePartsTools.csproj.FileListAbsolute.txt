@@ -13,13 +13,6 @@ C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.1904
 C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Microsoft.AspNetCore.Components.WebView.dll
 C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Microsoft.AspNetCore.Components.WebView.Maui.dll
 C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Microsoft.AspNetCore.Metadata.dll
-C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Microsoft.Data.Sqlite.dll
-C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Microsoft.EntityFrameworkCore.dll
-C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Microsoft.EntityFrameworkCore.Abstractions.dll
-C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Microsoft.EntityFrameworkCore.Relational.dll
-C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Microsoft.EntityFrameworkCore.Sqlite.dll
-C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Caching.Abstractions.dll
-C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Caching.Memory.dll
 C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Configuration.dll
 C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Configuration.Abstractions.dll
 C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Configuration.Binder.dll
@@ -27,7 +20,6 @@ C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.1904
 C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Configuration.Json.dll
 C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.DependencyModel.dll
 C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.FileProviders.Abstractions.dll
 C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.FileProviders.Composite.dll
 C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.FileProviders.Embedded.dll
@@ -59,7 +51,6 @@ C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.1904
 C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\RestSharp.dll
 C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\SQLitePCLRaw.batteries_v2.dll
 C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\SQLitePCLRaw.core.dll
-C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\SQLitePCLRaw.provider.e_sqlite3.dll
 C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\System.IO.Pipelines.dll
 C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Microsoft.Graphics.Canvas.dll
 C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Microsoft.WindowsAppRuntime.Bootstrap.dll
@@ -363,3 +354,7 @@ C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.1904
 C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
 C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\ProjectArchitectures.txt
+C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\BlazorBootstrap.dll
+C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\SQLite-net.dll
+C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\SQLitePCLRaw.nativelibrary.dll
+C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\SQLitePCLRaw.provider.dynamic_cdecl.dll

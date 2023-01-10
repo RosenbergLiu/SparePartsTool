@@ -18,36 +18,36 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\AppX</LayoutDir>
-    <RegisteredManifestChecksum>F16ADA48ED7F0E4617B6BF24DB84F277090C71ADE10557FD547BB65582A3FF91</RegisteredManifestChecksum>
-    <RegisteredPackageMoniker>21956XiangyuRoshanLiu.50264AF497CCC_2.2.10.0_x64__vp1hbg00a83r2</RegisteredPackageMoniker>
+    <RegisteredManifestChecksum>606E621DB160E662EA17F9992985EEB2CCA9580D7FAFE708E13D27736F990F14</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>21956XiangyuRoshanLiu.50264AF497CCC_2.2.11.0_x64__vp1hbg00a83r2</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>21956XiangyuRoshanLiu.50264AF497CCC_vp1hbg00a83r2!App</RegisteredUserModeAppID>
     <RegisteredPackageID>21956XiangyuRoshanLiu.50264AF497CCC</RegisteredPackageID>
     <RegisteredPackagePublisher>CN=B2622251-BD87-41D0-B49B-014D549301D6</RegisteredPackagePublisher>
-    <RegisteredVersion>2.2.10.0</RegisteredVersion>
+    <RegisteredVersion>2.2.11.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
     <AppXManifest Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-01-05T23:43:00.179</Modified>
+      <Modified>2023-01-10T21:46:17.492</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-01-05T23:42:59.514</Modified>
+      <Modified>2023-01-10T21:46:17.083</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\SparePartsTools.runtimeconfig.json">
       <PackagePath>SparePartsTools.runtimeconfig.json</PackagePath>
-      <Modified>2023-01-05T23:13:39.399</Modified>
+      <Modified>2023-01-10T21:46:16.852</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\bin\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\SparePartsTools.dll">
       <PackagePath>SparePartsTools.dll</PackagePath>
-      <Modified>2023-01-05T23:42:58.632</Modified>
+      <Modified>2023-01-10T21:46:15.428</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>SparePartsTools.exe</PackagePath>
-      <Modified>2023-01-05T23:42:58.658</Modified>
+      <Modified>2023-01-10T21:46:15.455</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\.nuget\packages\microsoft.netcore.app.runtime.win-x64\7.0.1\runtimes\win-x64\lib\net7.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -981,26 +981,6 @@
       <PackagePath>RestSharp.dll</PackagePath>
       <Modified>2022-11-19T16:12:36.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\xygen\.nuget\packages\sqlite-net-pcl\1.8.116\lib\netstandard2.0\SQLite-net.dll">
-      <PackagePath>SQLite-net.dll</PackagePath>
-      <Modified>2021-09-02T21:04:32.000</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\xygen\.nuget\packages\sqlitepclraw.bundle_green\2.0.4\lib\netcoreapp3.1\SQLitePCLRaw.batteries_v2.dll">
-      <PackagePath>SQLitePCLRaw.batteries_v2.dll</PackagePath>
-      <Modified>2020-09-03T17:13:26.000</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\xygen\.nuget\packages\sqlitepclraw.bundle_green\2.0.4\lib\netcoreapp3.1\SQLitePCLRaw.nativelibrary.dll">
-      <PackagePath>SQLitePCLRaw.nativelibrary.dll</PackagePath>
-      <Modified>2020-09-03T17:13:02.000</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\xygen\.nuget\packages\sqlitepclraw.core\2.1.3\lib\netstandard2.0\SQLitePCLRaw.core.dll">
-      <PackagePath>SQLitePCLRaw.core.dll</PackagePath>
-      <Modified>2022-12-01T19:23:04.000</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\xygen\.nuget\packages\sqlitepclraw.provider.dynamic_cdecl\2.1.3\lib\netstandard2.0\SQLitePCLRaw.provider.dynamic_cdecl.dll">
-      <PackagePath>SQLitePCLRaw.provider.dynamic_cdecl.dll</PackagePath>
-      <Modified>2022-12-01T19:23:08.000</Modified>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\.nuget\packages\system.io.pipelines\7.0.0\lib\net7.0\System.IO.Pipelines.dll">
       <PackagePath>System.IO.Pipelines.dll</PackagePath>
       <Modified>2022-10-18T16:15:28.000</Modified>
@@ -1013,13 +993,9 @@
       <PackagePath>Microsoft.WindowsAppRuntime.Bootstrap.dll</PackagePath>
       <Modified>2022-11-08T19:31:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\xygen\.nuget\packages\sqlitepclraw.lib.e_sqlite3\2.0.4\runtimes\win-x64\native\e_sqlite3.dll">
-      <PackagePath>e_sqlite3.dll</PackagePath>
-      <Modified>2020-08-17T14:38:20.000</Modified>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xygen\Documents\GitHub\SparePartsTool\obj\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\SparePartsTools.deps.json">
       <PackagePath>SparePartsTools.deps.json</PackagePath>
-      <Modified>2023-01-05T23:43:00.010</Modified>
+      <Modified>2023-01-10T21:46:17.327</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files\dotnet\packs\Microsoft.Maui.Controls.Ref.win\7.0.52\ref\net7.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
       <PackagePath>Microsoft.Maui.Controls.Compatibility.pri</PackagePath>

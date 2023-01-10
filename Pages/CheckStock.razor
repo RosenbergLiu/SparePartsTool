@@ -11,7 +11,7 @@
     <button class="btn btn-primary" onclick="@GoLogin">Login</button>
 }else{
     <EditForm id="checkstockform" class="form-group" Model="@stockModel" OnValidSubmit="Check">
-        <label for="part">Part Number</label>
+        <label for="part" class="form-label">Part Number</label>
         <InputText id="part" class="form-control" @bind-Value="stockModel.PartNumber" required/>
         <br>
         <button class="btn btn-primary form-control" type="submit">Check</button>

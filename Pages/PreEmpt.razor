@@ -8,17 +8,20 @@
 @if (Preferences.Default.Get("login", false) == false)
 {
     <h3 style="color:red">Login expired</h3>
-    <button class="btn btn-primary" onclick="@GoLogin">Login</button>
+    <button class="btn btn-primary" onclick="@(()=>GoLogin())">Login</button>
 }else{
-    <EditForm id="preemptform" class="form-group container" Model="@preemptModel" OnValidSubmit="Add">
-        <div class="row">
-            <label for="part">Part Number</label>
+    <br />
+    <EditForm id="preemptform" class="form-group" Model="@preemptModel" OnValidSubmit="Add">
+        <div class="input-group">
+            <span class="input-group-text">Part Number</span>
             <InputText id="part" class="form-control" @bind-Value="preemptModel.part" required />
         </div>
         
-        <div class="row">
-            <label for="qty">Quantity</label>
-            <InputText id="qty" type="number" class="form-control col" @bind-Value="preemptModel.qty" required />
+        <br>
+        <div class="input-group">
+                <span class="input-group-text">Quantity</span>
+                <InputText id="qty" type="number" class="form-control" @bind-Value="preemptModel.qty" required />
+
             <div class="col">
                 @if (spiner)
                 {
@@ -29,50 +32,47 @@
                     </div>
                 }
             </div>
-            <button class="btn btn-primary form-control col" type="submit">Add to list</button>
+            <div class="col">
+                <button class="btn btn-primary form-control" type="submit">Add to list</button>
+            </div>
+            
         </div>
     </EditForm>
     <p style="color:red">@preemptMessage</p>
 
-    <br />
 
-    <table class="table table-striped table-bordered">
+    <div id="datatable">
+        <table class="table table-success table-striped table-bordered">
         <thead class="thead-dark">
             <tr>
                 <th>Part Number</th>
                 <th>Quantity</th>
-                <th> </th>
+                <th>Actions</th>
             </tr>
-                
         </thead>
         <tbody>
             @foreach(var item in PartList)
             {
                 <tr>
-                    <td>@item.Key</td>
-                    <td>@item.Value</td>
                     <td>
-                        <a class="btn btn-sm" onclick="@(()=>Delete(item.Key))">Delete</a>
+                        <a class="btn btn-sm">@item.Key</a>
+                    </td>
+                    <td>
+                        <a class="btn btn-sm">@item.Value</a>
+                    </td>
+                    <td>
+                        <a class="btn btn-sm btn-danger" onclick="@(()=>Delete(item.Key))">Delete</a>
                     </td>
                 </tr>
             }
         </tbody>
     </table>
-    <br />
-    <br />
-    <EditForm class="form-group container" Model="@jobModel" OnValidSubmit="Submit">
-        <div class="row">
-            <label for="job">Job Number</label>
-            <InputText id="job" class="form-control" @bind-Value="jobModel.job" required />
-            <br>
-            
-        </div>
-        <br />
-        <div class="row">
-            <button class="btn btn-primary form-control">
-                Submit
-            </button>
-        </div>
+    </div>
+    <EditForm class="form-group" Model="@jobModel" OnValidSubmit="Submit">
+        <label for="job" class="form-label">Job Number</label>
+        <InputText id="job" class="form-control" @bind-Value="jobModel.job" required />
+        <br>
+        <button class="btn btn-primary form-control">Submit</button>
         
         
     </EditForm>
