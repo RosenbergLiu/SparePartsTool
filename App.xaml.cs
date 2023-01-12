@@ -1,4 +1,4 @@
-﻿namespace SparePartsTools;
+﻿namespace SparePartTools;
 
 public partial class App : Application
 {

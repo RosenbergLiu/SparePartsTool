@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace SparePartsTools;
+namespace SparePartTools;
 
 public class Program
 {

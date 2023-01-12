@@ -14,69 +14,12 @@ else if (Preferences.Default.Get("user", " ") != "Roshan Liu")
 }
 else
 {
-    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-        <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked onclick="@(()=>CounterSale())">
-        <label class="btn btn-outline-primary" for="btnradio1">Counter sale</label>
-
-        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" onclick="@(()=>FOC())">
-        <label class="btn btn-outline-primary" for="btnradio2">Free of charge</label>
-
-        <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off" onclick="@(()=>Delivery())">
-        <label class="btn btn-outline-primary" for="btnradio3">Delivery</label>
-    </div>
-    <br />
-    <EditForm class="form-group" Model="@shipping" OnValidSubmit="Submit">
-        <lable for="cusname">Name on invoice</lable>
-        <InputText id="cusname" class="form-control" @bind-Value="shipping.Name"></InputText>
-        
-    </EditForm>
-
-
-
-    @if (Kind == "CS")
-    {
-        <p>Counter sale</p>
-    }
-    @if(Kind == "FOC")
-    {
-        <p>Free of charge</p>
-    }
-    @if (Kind == "D")
-    {
-        <p>Delivery</p>
-    }
+    
 }
-
-
-
-
-
-
-@code {
-    public class Shipping
-    {
-        public string Name{ get; set; }
-    }
-    public Shipping shipping = new();
-    public string Kind { get; set; } = "CS";
+@code{
     private void GoLogin()
     {
         _navigationManager.NavigateTo("");
+      
     }
-    private void CounterSale()
-    {
-        Kind = "CS";
-        StateHasChanged();
-    }
-    private void FOC()
-    {
-        Kind = "FOC";
-        StateHasChanged();
-    }
-    private void Delivery()
-    {
-        Kind = "D";
-        StateHasChanged();
-    }
-    private void Submit() { }
 }

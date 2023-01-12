@@ -1,8 +1,8 @@
 ﻿<maui:MauiWinUIApplication
-    x:Class="SparePartsTools.WinUI.App"
+    x:Class="SparePartTools.WinUI.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:maui="using:Microsoft.Maui"
-    xmlns:local="using:SparePartsTools.WinUI">
+    xmlns:local="using:SparePartTools.WinUI">
 
 </maui:MauiWinUIApplication>

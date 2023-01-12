@@ -361,11 +361,13 @@
     <Language Code="zu-za" InMinimumRequirementSet="true" />
   </SupportedLocales>
   <ProductReservedInfo>
-    <MainPackageIdentityName>21956XiangyuRoshanLiu.50264AF497CCC</MainPackageIdentityName>
+    <MainPackageIdentityName>21956XiangyuRoshanLiu.26260266688BC</MainPackageIdentityName>
     <ReservedNames>
-      <ReservedName>SpareParts Tools</ReservedName>
+      <ReservedName>SparepartsTool</ReservedName>
     </ReservedNames>
   </ProductReservedInfo>
-  <AccountPackageIdentityNames />
-  <PackageInfoList LandingUrl="https://developer.microsoft.com/dashboard/Application?appId=9NR0KF04RRDJ" />
+  <AccountPackageIdentityNames>
+    <MainPackageIdentityName>21956XiangyuRoshanLiu.50264AF497CCC</MainPackageIdentityName>
+  </AccountPackageIdentityNames>
+  <PackageInfoList LandingUrl="https://developer.microsoft.com/dashboard/Application?appId=9NW376R31B7F" />
 </StoreAssociation>

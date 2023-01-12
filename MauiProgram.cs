@@ -1,10 +1,7 @@
-﻿
-using BlazorBootstrap;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Logging;
+﻿using Microsoft.Extensions.Logging;
+using SparePartTools.Data;
 
-
-namespace SparePartsTools;
+namespace SparePartTools;
 
 public static class MauiProgram
 {
@@ -20,12 +17,12 @@ public static class MauiProgram
 
 		builder.Services.AddMauiBlazorWebView();
 
-
 #if DEBUG
-        builder.Services.AddBlazorWebViewDeveloperTools();
+		builder.Services.AddBlazorWebViewDeveloperTools();
 		builder.Logging.AddDebug();
 #endif
 
+		builder.Services.AddSingleton<WeatherForecastService>();
 
 		return builder.Build();
 	}
