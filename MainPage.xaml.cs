@@ -1,4 +1,4 @@
-﻿namespace SparePartTools;
+﻿namespace SparePartsTools;
 
 public partial class MainPage : ContentPage
 {

@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace SparePartTools;
+namespace SparePartsTools;
 
 [Register("AppDelegate")]
 public class AppDelegate : MauiUIApplicationDelegate

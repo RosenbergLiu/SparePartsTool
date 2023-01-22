@@ -1,7 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
-using SparePartTools.Data;
 
-namespace SparePartTools;
+namespace SparePartsTools;
 
 public static class MauiProgram
 {
@@ -22,7 +21,6 @@ public static class MauiProgram
 		builder.Logging.AddDebug();
 #endif
 
-		builder.Services.AddSingleton<WeatherForecastService>();
 
 		return builder.Build();
 	}
