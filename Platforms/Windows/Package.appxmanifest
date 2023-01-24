@@ -6,13 +6,13 @@
   xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
   IgnorableNamespaces="uap rescap">
 
-  <Identity Name="maui-package-name-placeholder" Publisher="CN=User Name" Version="0.0.0.0" />
+  <Identity Name="21956XiangyuRoshanLiu.26260266688BC" Publisher="CN=B2622251-BD87-41D0-B49B-014D549301D6" Version="4.0.3.0" />
 
   <mp:PhoneIdentity PhoneProductId="1EAE176C-4FE6-488C-BCEB-FAA8A063F2BA" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>$placeholder$</DisplayName>
-    <PublisherDisplayName>User Name</PublisherDisplayName>
+    <DisplayName>SparePartsTool</DisplayName>
+    <PublisherDisplayName>Xiangyu Roshan Liu</PublisherDisplayName>
     <Logo>$placeholder$.png</Logo>
   </Properties>
 
