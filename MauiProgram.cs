@@ -1,7 +1,7 @@
-﻿using Append.Blazor.Printing;
+﻿
 using Microsoft.Extensions.Logging;
 
-namespace SparePartsTools;
+namespace SparePartsTool;
 
 public static class MauiProgram
 {

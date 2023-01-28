@@ -2,7 +2,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SparePartsTools", "SparePartsTools.csproj", "{5D88ADC6-818C-402B-8DE2-7FBB08187053}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SparePartsTool", "SparePartsTool.csproj", "{5D88ADC6-818C-402B-8DE2-7FBB08187053}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,7 +21,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		        SolutionGuid = {61F7FB11-1E47-470C-91E2-47F8143E1572}
 		SolutionGuid = {E28508AA-4AA3-414A-AFA9-0F6633B66F93}
+		        SolutionGuid = {61F7FB11-1E47-470C-91E2-47F8143E1572}
 	EndGlobalSection
 EndGlobal

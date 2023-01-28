@@ -1,6 +1,7 @@
 ﻿@page "/sale"
 @using RestSharp
 @inject NavigationManager _navigationManager
+@using Spire.Pdf
 
 <h1>Sale</h1>
 @if (Preferences.Default.Get("login", false) == false)
@@ -14,8 +15,10 @@ else if (Preferences.Default.Get("user", " ") != "Roshan Liu")
 }
 else
 {
+    
     @if(View == "PartEntry")
     {
+        
         <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item active" aria-current="page">Parts</li>
@@ -189,7 +192,7 @@ else
                     <input class="form-control" id="CusPhone" @bind-value="customerInfo.Phone" />
                 </div>
                 <div class="mb-3">
-                    <label for="CusStreet" class="form-label">Address (In Google format)</label>
+                    <label for="CusStreet" class="form-label">Address in Google Map format</label>
                     <input class="form-control" id="CusStreet" @bind-value="customerInfo.FullAddtress" required/>
                 </div>
 
@@ -219,7 +222,41 @@ else
                 <li class="breadcrumb-item active" aria-current="page">Payment</li>
             </ol>
         </nav>
-        <a href="https://partners.gorenje.com/sagCC/se_prodaja_rd_au.aspx?zapst=@Bill">@Bill</a>
+        <a href="https://partners.gorenje.com/sagCC/se_prodaja_rd_au.aspx?zapst=@Bill">Bill No. @Bill</a>
+
+        <EditForm class="form-group" Model="@discount" OnValidSubmit="Apply">
+            <div class="row g-3 align-items-center">
+                <div class="col-auto">
+                    <label for="coupon" class="col-form-label">Coupon</label>
+                </div>
+                <div class="col-auto">
+                    <input type="number" id="coupon" class="form-control" aria-describedby="HelpInline">
+                </div>
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-primary form-control">Apply</button>
+                </div>
+            </div>
+        </EditForm>
+
+
+
+
+        <EditForm class="form-group" Model="@payment" OnValidSubmit="Pay">
+            <div class="mb-3">
+                <label for="trancode" class="form-label">Transaction Code</label>
+                <input class="form-control" id="trancode" @bind-value="payment.TransCode" required />
+            </div>
+            <button type="submit" class="btn btn-primary form-control">Submit</button>
+        </EditForm>
+        @if (bar)
+        {
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+            </div>
+        }
+
+
+        
     }
     @CusMessage
 }
@@ -239,11 +276,20 @@ else
         public string part { get; set; }
         public string qty { get; set; } = "1";
     }
+    public class Payment
+    {
+        public string TransCode { get; set; }
+    }
     public class CustomerInfo
     {
-        public string Name{ get; set; }
-        public string FullAddtress{ get; set; }
+        public string Name { get; set; }
+        public string FullAddtress { get; set; }
         public string Phone { get; set; }
+        public string Type { get; set; } = "Retail";
+    }
+    public class Discount
+    {
+        public int Coupon { get; set; } = 0;
     }
     public class Result
     {
@@ -266,12 +312,13 @@ else
             Name = "Delivery Fee",
             Quantity = 1,
             Price = 24.2
-
         };
 
     public CustomerInfo customerInfo = new();
     public PartRecord partRecord = new();
     public Result result = new();
+    public Payment payment = new();
+    public Discount discount = new();
     private void GoLogin()
     {
         _navigationManager.NavigateTo("");
@@ -579,7 +626,7 @@ else
             }
 
             request.AddParameter("ctl00$ContentPlaceHolder1$tbkTelefon", Phone);
-            request.AddParameter("ctl00$ContentPlaceHolder1$tbkUlica", "");
+            request.AddParameter("ctl00$ContentPlaceHolder1$tbkUlica", Street);
             request.AddParameter("ctl00$ScriptManager1", "ctl00$ContentPlaceHolder1$UpdatePanel3|ctl00$ContentPlaceHolder1$btnShrani");
             request.AddParameter("ctl00$cbJezikApl", "English");
             request.AddParameter("ctl00$cbJezikApl$DDD$L", "EN");
@@ -641,11 +688,24 @@ else
         request.AddParameter("ctl00_ContentPlaceHolder1_ReportToolbar1_Menu_ITCNT6_PageNumber_VI", "1");
         request.AddParameter("ctl00_cbJezikApl_VI", "EN");
         request.AddParameter("Cookie", "time_zone_offset=660; time_zone_has_dst=1; time_zone_is_dst=1; time_zone_base_offset=600; ASP.NET_SessionId=rsamsrcx1ynuvx4ns4npodlw; country_code=036; .sagAuth=605E2017A1448BCA8BF91AFD94FF59B05A58543734C6489243035467F60CE5FBC874674FD855C23EEC9D39BA9D1C99458BF43675D466F6DDFB3D518BFA8972CEEDCFA473C587A2C780B22930E14C6DFB3DFAF99E4368AC6079D0F40C4B65A89888CB1F86FE6D55830727EDFCCCB6FB7609EBD6E081F14550AD422722DBA7DECC53B7A2F99F3D96A1601A1F8FBA722D63; ai_user=rd4XS|2023-01-27T05:32:36.381Z; SAGMenu=1;1;1;1;0;0;0;0;0;0;0;0;0;0;0;0;1;1; ai_session=x1LiE|1674800829759|1674800852635.3");
-
         response = client.Execute(request);
-        string DocumentsPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-        File.WriteAllBytes(DocumentsPath+$"{Bill}.pdf", response.RawBytes);
 
+        if (DeviceInfo.Platform == DevicePlatform.WinUI)
+        {
+            string DocumentsPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            File.WriteAllBytes(DocumentsPath + $"{Bill}.pdf", response.RawBytes);
+            PdfDocument doc = new PdfDocument(DocumentsPath + $"{Bill}.pdf");
+            doc.Print();
+        }
+
+    }
+
+    private void Apply()
+    {
+        
+    }
+    private void Pay()
+    {
         
     }
 }
