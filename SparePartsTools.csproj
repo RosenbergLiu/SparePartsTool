@@ -56,6 +56,7 @@
     </ItemGroup>
 
     <ItemGroup>
+        <PackageReference Include="Append.Blazor.Printing" Version="1.1.0" />
         <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
         <PackageReference Include="RestSharp" Version="108.0.3" />
     </ItemGroup>

@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Append.Blazor.Printing;
+using Microsoft.Extensions.Logging;
 
 namespace SparePartsTools;
 
@@ -17,7 +18,7 @@ public static class MauiProgram
 		builder.Services.AddMauiBlazorWebView();
 
 #if DEBUG
-		builder.Services.AddBlazorWebViewDeveloperTools();
+        builder.Services.AddBlazorWebViewDeveloperTools();
 		builder.Logging.AddDebug();
 #endif
 
