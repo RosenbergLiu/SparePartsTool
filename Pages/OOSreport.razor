@@ -3,25 +3,28 @@
 @inject NavigationManager _navigationManager
 @using Requests;
 <h1>Out of stock report</h1>
-
-@if (Preferences.Default.Get("login", false) == false)
+@if (DeviceInfo.Platform != DevicePlatform.WinUI)
 {
-    <h3 style="color:red">Login expired</h3>
-    <button class="btn btn-primary" onclick="@(()=>GoLogin())">Login</button>
+    <h3 style="color:red">Your operation system does not support this function</h3>
 }
 else
 {
-    <button class="btn btn-primary" onclick="@(()=>GetCSV())">Get CSV for all jobs</button>
+    @if (Preferences.Default.Get("login", false) == false)
+    {
+            <h3 style="color:red">Login expired</h3>
+            <button class="btn btn-primary" onclick="@(()=>_navigationManager.NavigateTo(""))">Login</button>
+    }
+    else
+    {
+            <button class="btn btn-primary" onclick="@(()=>GetCSV())">Get CSV for all jobs</button>
+    }
 }
+
+
 
 @code {
     public string cookie { get; set; } = Preferences.Default.Get("cookie", "");
     private GetCSV getCSV=new();
-
-    private void GoLogin()
-    {
-        _navigationManager.NavigateTo("");
-    }
     private async Task GetCSV()
     {
         await getCSV.Get(cookie);
