@@ -15,7 +15,6 @@ else if (Preferences.Default.Get("user", " ") != "Roshan Liu")
 }
 else
 {
-    
     @if(View == "PartEntry")
     {
         
@@ -224,7 +223,7 @@ else
             </ol>
         </nav>
         <a href="https://partners.gorenje.com/sagCC/se_prodaja_rd_au.aspx?zapst=@Bill">Bill No. @Bill</a>
-
+        <br/>
         <EditForm class="form-group" Model="@discount" OnValidSubmit="Apply">
             <div class="row g-3 align-items-center">
                 <div class="col-auto">
@@ -239,7 +238,7 @@ else
             </div>
         </EditForm>
         <br/>
-        <button class="btn btn-primary" onclick="@(()=>Print())">Print Invoice</button>
+        <button class="btn btn-primary" onclick="@(()=>Print())">Print invoice</button>
         <br/>
 
         <br/>
@@ -571,8 +570,12 @@ else
         View = "Payment";
 
 
-        client = new RestClient($"https://partners.gorenje.com/sagCC/se_prodaja_rd_au.aspx?dxrep_fake=&zapst={Bill}");
-        request = new RestRequest($"https://partners.gorenje.com/sagCC/se_prodaja_rd_au.aspx?dxrep_fake=&zapst={Bill}",Method.Post);
+
+    }
+    private async Task Print()
+    {
+        var client = new RestClient($"https://partners.gorenje.com/sagCC/se_prodaja_rd_au.aspx?dxrep_fake=&zapst={Bill}");
+        var request = new RestRequest($"https://partners.gorenje.com/sagCC/se_prodaja_rd_au.aspx?dxrep_fake=&zapst={Bill}", Method.Post);
         request.AddHeader("sec-ch-ua", "\"Not_A Brand\";v=\"99\", \"Google Chrome\";v=\"109\", \"Chromium\";v=\"109\"");
         request.AddHeader("sec-ch-ua-mobile", "?0");
         request.AddHeader("sec-ch-ua-platform", "\"Windows\"");
@@ -611,20 +614,18 @@ else
         request.AddParameter("ctl00_ContentPlaceHolder1_ReportToolbar1_Menu_ITCNT6_PageNumber_VI", "1");
         request.AddParameter("ctl00_cbJezikApl_VI", "EN");
         request.AddParameter("Cookie", "time_zone_offset=660; time_zone_has_dst=1; time_zone_is_dst=1; time_zone_base_offset=600; ASP.NET_SessionId=rsamsrcx1ynuvx4ns4npodlw; country_code=036; .sagAuth=605E2017A1448BCA8BF91AFD94FF59B05A58543734C6489243035467F60CE5FBC874674FD855C23EEC9D39BA9D1C99458BF43675D466F6DDFB3D518BFA8972CEEDCFA473C587A2C780B22930E14C6DFB3DFAF99E4368AC6079D0F40C4B65A89888CB1F86FE6D55830727EDFCCCB6FB7609EBD6E081F14550AD422722DBA7DECC53B7A2F99F3D96A1601A1F8FBA722D63; ai_user=rd4XS|2023-01-27T05:32:36.381Z; SAGMenu=1;1;1;1;0;0;0;0;0;0;0;0;0;0;0;0;1;1; ai_session=x1LiE|1674800829759|1674800852635.3");
-        response = client.Execute(request);
+        var response =await client.ExecuteAsync(request);
 
         if (DeviceInfo.Platform == DevicePlatform.WinUI)
         {
             string DocumentsPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            File.WriteAllBytes(DocumentsPath + $"{Bill}.pdf", response.RawBytes);
+            File.WriteAllBytes(DocumentsPath + $"//{Bill}.pdf", response.RawBytes);
+            DocumentsPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            PdfDocument doc = new PdfDocument(DocumentsPath + $"//{Bill}.pdf");
+            doc.Print();
+            doc.Dispose();
         }
-    }
-    private async Task Print()
-    {
-        string DocumentsPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-        PdfDocument doc = new PdfDocument(DocumentsPath + $"{Bill}.pdf");
-        doc.Print();
-        doc.Dispose();
+        await Task.CompletedTask;
     }
 
     public async Task AddPart(string Bill, string Number, string Quantity, string Street, string State, string PostCode, string Suburb,string Phone)
