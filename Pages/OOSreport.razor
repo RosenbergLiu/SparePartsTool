@@ -2,7 +2,9 @@
 @using RestSharp
 @inject NavigationManager _navigationManager
 @using Requests;
+@using Google.Cloud.Firestore;
 <h1>Out of stock report</h1>
+<br/>
 @if (DeviceInfo.Platform != DevicePlatform.WinUI)
 {
     <h3 style="color:red">Your operation system does not support this function</h3>
@@ -28,5 +30,24 @@ else
     private async Task GetCSV()
     {
         await getCSV.Get(cookie);
+    }
+
+    private async void Test()
+    {
+        FirestoreDb db = FirestoreDb.Create("SparepartsTool");
+        DocumentReference docRef = db.Collection("cities").Document("LA");
+        Dictionary<string, object> city = new Dictionary<string, object>
+{
+    { "name", "Los Ange2les" },
+    { "state", "CasA" },
+    { "country", "USsA" }
+};
+        await docRef.SetAsync(city);
+    }
+
+
+    protected override void OnInitialized()
+    {
+        Test();
     }
 }

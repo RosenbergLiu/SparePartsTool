@@ -66,6 +66,9 @@
       <Content Update="sparepartstool-fe52cb972c53.json">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </Content>
+      <Content Update="wwwroot\sparepartstool-fe52cb972c53.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
     </ItemGroup>
 
 </Project>
