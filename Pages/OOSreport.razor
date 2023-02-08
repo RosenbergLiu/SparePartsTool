@@ -13,8 +13,8 @@ else
 {
     @if (Preferences.Default.Get("login", false) == false)
     {
-            <h3 style="color:red">Login expired</h3>
-            <button class="btn btn-primary" onclick="@(()=>_navigationManager.NavigateTo(""))">Login</button>
+        <h3 style="color:red">Login expired</h3>
+        <button class="btn btn-primary" onclick="@(()=>_navigationManager.NavigateTo(""))">Login</button>
     }
     else
     {
@@ -34,15 +34,6 @@ else
 
     private async void Test()
     {
-        FirestoreDb db = FirestoreDb.Create("SparepartsTool");
-        DocumentReference docRef = db.Collection("cities").Document("LA");
-        Dictionary<string, object> city = new Dictionary<string, object>
-{
-    { "name", "Los Ange2les" },
-    { "state", "CasA" },
-    { "country", "USsA" }
-};
-        await docRef.SetAsync(city);
     }
 
 
